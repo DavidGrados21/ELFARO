@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9C023DC7-9301-4BE7-B360-E0EDB0AE7FE7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ElFaroV1</RootNamespace>
+    <AssemblyName>ElFaroV1</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CaraPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CaraPrincipal.Designer.cs">
+      <DependentUpon>CaraPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormAlmacen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAlmacen.Designer.cs">
+      <DependentUpon>FormAlmacen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMesa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMesa.Designer.cs">
+      <DependentUpon>FormMesa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMozo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMozo.Designer.cs">
+      <DependentUpon>FormMozo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ISAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ISAdmin.Designer.cs">
+      <DependentUpon>ISAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ISMozo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ISMozo.Designer.cs">
+      <DependentUpon>ISMozo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CaraPrincipal.resx">
+      <DependentUpon>CaraPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAlmacen.resx">
+      <DependentUpon>FormAlmacen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMesa.resx">
+      <DependentUpon>FormMesa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMozo.resx">
+      <DependentUpon>FormMozo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ISAdmin.resx">
+      <DependentUpon>ISAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ISMozo.resx">
+      <DependentUpon>ISMozo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaEntidad\CapaEntidad.csproj">
+      <Project>{89ec92a7-f84a-481f-8798-7c7d81e4ccc1}</Project>
+      <Name>CapaEntidad</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CapaLogica\CapaLogica.csproj">
+      <Project>{5df8da97-d81c-4c23-a0f7-732d87ada5b5}</Project>
+      <Name>CapaLogica</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
