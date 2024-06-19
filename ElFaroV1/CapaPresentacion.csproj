@@ -76,12 +76,6 @@
     <Compile Include="ISAdmin.Designer.cs">
       <DependentUpon>ISAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="ISMozo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ISMozo.Designer.cs">
-      <DependentUpon>ISMozo.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CaraPrincipal.resx">
@@ -98,9 +92,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ISAdmin.resx">
       <DependentUpon>ISAdmin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ISMozo.resx">
-      <DependentUpon>ISMozo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

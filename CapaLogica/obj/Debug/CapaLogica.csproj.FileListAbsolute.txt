@@ -18,7 +18,6 @@ E:\repo\ElFaroV1\ELFARO\CapaLogica\bin\Debug\CapaEntidad.dll
 E:\repo\ElFaroV1\ELFARO\CapaLogica\bin\Debug\CapaDatos.pdb
 E:\repo\ElFaroV1\ELFARO\CapaLogica\bin\Debug\CapaEntidad.pdb
 E:\repo\ElFaroV1\ELFARO\CapaLogica\obj\Debug\CapaLogica.csproj.AssemblyReference.cache
-E:\repo\ElFaroV1\ELFARO\CapaLogica\obj\Debug\CapaLogica.FormMesa.resources
 E:\repo\ElFaroV1\ELFARO\CapaLogica\obj\Debug\CapaLogica.Properties.Resources.resources
 E:\repo\ElFaroV1\ELFARO\CapaLogica\obj\Debug\CapaLogica.csproj.GenerateResource.cache
 E:\repo\ElFaroV1\ELFARO\CapaLogica\obj\Debug\CapaLogica.csproj.CoreCompileInputs.cache
