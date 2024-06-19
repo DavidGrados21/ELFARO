@@ -23,9 +23,9 @@ namespace ElFaroV1
         }
         private void AgregarOpcionesComboBox()
         {
-            CBInsumos.Items.Add("Kg");
-            CBInsumos.Items.Add("L");
-            CBInsumos.Items.Add("U");
+            CBInsumos.Items.Add("Kilogramos");
+            CBInsumos.Items.Add("Litros");
+            CBInsumos.Items.Add("Unidades");
         }
         public void listarInsumos()
         {

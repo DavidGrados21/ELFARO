@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using CapaEntidad;
 
 namespace CapaDatos
@@ -56,6 +57,38 @@ namespace CapaDatos
             }
             return lista;
         }
+        public void LoadPlatillos(ComboBox comboBox)
+        {
+            try
+            {
+                using (SqlConnection cn = Conexion.Instancia.Conectar())
+                {
+                    cn.Open(); // Abre la conexión antes de ejecutar el comando
+
+                    using (SqlCommand cmd = new SqlCommand("SELECT NombrePlatillo FROM Platillo", cn))
+                    {
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                comboBox.Items.Add(reader["NombrePlatillo"].ToString());
+                            }
+                        }
+                    }
+
+                    cn.Close(); // Cierra la conexión después de usarla
+                }
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error de SQL: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
 
     }
 }

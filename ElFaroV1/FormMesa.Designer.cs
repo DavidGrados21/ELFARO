@@ -1,4 +1,4 @@
-﻿namespace ElFaroV1
+﻿namespace CapaLogica
 {
     partial class FormMesa
     {
@@ -28,56 +28,173 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMesa));
+            this.GBDatosMozo = new System.Windows.Forms.GroupBox();
+            this.btnIniciarSesion = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.CBPlatillos = new System.Windows.Forms.ComboBox();
+            this.dgvPedidos = new System.Windows.Forms.DataGridView();
+            this.GBPedido = new System.Windows.Forms.GroupBox();
             this.btnAgregar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.labelMesa = new System.Windows.Forms.Label();
+            this.GBDatosMozo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).BeginInit();
+            this.GBPedido.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // comboBox1
+            // GBDatosMozo
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(13, 27);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(474, 21);
-            this.comboBox1.TabIndex = 0;
+            this.GBDatosMozo.Controls.Add(this.btnIniciarSesion);
+            this.GBDatosMozo.Controls.Add(this.textBox2);
+            this.GBDatosMozo.Controls.Add(this.textBox1);
+            this.GBDatosMozo.Controls.Add(this.label2);
+            this.GBDatosMozo.Controls.Add(this.label1);
+            this.GBDatosMozo.Location = new System.Drawing.Point(12, 12);
+            this.GBDatosMozo.Name = "GBDatosMozo";
+            this.GBDatosMozo.Size = new System.Drawing.Size(186, 166);
+            this.GBDatosMozo.TabIndex = 0;
+            this.GBDatosMozo.TabStop = false;
+            this.GBDatosMozo.Text = "Datos Mozo";
             // 
-            // dataGridView1
+            // btnIniciarSesion
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 76);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(474, 238);
-            this.dataGridView1.TabIndex = 1;
+            this.btnIniciarSesion.Location = new System.Drawing.Point(45, 137);
+            this.btnIniciarSesion.Name = "btnIniciarSesion";
+            this.btnIniciarSesion.Size = new System.Drawing.Size(89, 23);
+            this.btnIniciarSesion.TabIndex = 4;
+            this.btnIniciarSesion.Text = "Iniciar sesion";
+            this.btnIniciarSesion.UseVisualStyleBackColor = true;
+            this.btnIniciarSesion.Click += new System.EventHandler(this.btnIniciarSesion_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(6, 107);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(156, 20);
+            this.textBox2.TabIndex = 3;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(6, 47);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(156, 20);
+            this.textBox1.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 80);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(61, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Contraseña";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(3, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(83, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Codigo de mozo";
+            // 
+            // CBPlatillos
+            // 
+            this.CBPlatillos.FormattingEnabled = true;
+            this.CBPlatillos.Location = new System.Drawing.Point(10, 28);
+            this.CBPlatillos.Name = "CBPlatillos";
+            this.CBPlatillos.Size = new System.Drawing.Size(327, 21);
+            this.CBPlatillos.TabIndex = 1;
+            // 
+            // dgvPedidos
+            // 
+            this.dgvPedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPedidos.Location = new System.Drawing.Point(10, 75);
+            this.dgvPedidos.Name = "dgvPedidos";
+            this.dgvPedidos.Size = new System.Drawing.Size(405, 233);
+            this.dgvPedidos.TabIndex = 2;
+            // 
+            // GBPedido
+            // 
+            this.GBPedido.Controls.Add(this.btnAgregar);
+            this.GBPedido.Controls.Add(this.dgvPedidos);
+            this.GBPedido.Controls.Add(this.CBPlatillos);
+            this.GBPedido.Location = new System.Drawing.Point(213, 12);
+            this.GBPedido.Name = "GBPedido";
+            this.GBPedido.Size = new System.Drawing.Size(439, 314);
+            this.GBPedido.TabIndex = 3;
+            this.GBPedido.TabStop = false;
+            this.GBPedido.Text = "Pedido";
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(510, 25);
+            this.btnAgregar.Location = new System.Drawing.Point(343, 26);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(75, 23);
-            this.btnAgregar.TabIndex = 2;
+            this.btnAgregar.Size = new System.Drawing.Size(72, 22);
+            this.btnAgregar.TabIndex = 3;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 222);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(186, 99);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
+            // labelMesa
+            // 
+            this.labelMesa.AutoSize = true;
+            this.labelMesa.Font = new System.Drawing.Font("Stencil", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelMesa.Location = new System.Drawing.Point(62, 191);
+            this.labelMesa.Name = "labelMesa";
+            this.labelMesa.Size = new System.Drawing.Size(14, 19);
+            this.labelMesa.TabIndex = 5;
+            this.labelMesa.Text = ".";
             // 
             // FormMesa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(613, 345);
-            this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.comboBox1);
+            this.ClientSize = new System.Drawing.Size(652, 345);
+            this.Controls.Add(this.labelMesa);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.GBPedido);
+            this.Controls.Add(this.GBDatosMozo);
             this.Name = "FormMesa";
             this.Text = "FormMesa";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.GBDatosMozo.ResumeLayout(false);
+            this.GBDatosMozo.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).EndInit();
+            this.GBPedido.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.GroupBox GBDatosMozo;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox CBPlatillos;
+        private System.Windows.Forms.DataGridView dgvPedidos;
+        private System.Windows.Forms.GroupBox GBPedido;
+        private System.Windows.Forms.Button btnIniciarSesion;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label labelMesa;
         private System.Windows.Forms.Button btnAgregar;
     }
 }

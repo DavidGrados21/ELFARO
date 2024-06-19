@@ -4,3 +4,9 @@ C:\Users\David\source\repos\ElFaroV1\CapaEntidad\obj\Debug\CapaEntidad.csproj.As
 C:\Users\David\source\repos\ElFaroV1\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
 C:\Users\David\source\repos\ElFaroV1\CapaEntidad\obj\Debug\CapaEntidad.dll
 C:\Users\David\source\repos\ElFaroV1\CapaEntidad\obj\Debug\CapaEntidad.pdb
+E:\repo\ElFaroV1\ELFARO\CapaEntidad\bin\Debug\CapaEntidad.dll
+E:\repo\ElFaroV1\ELFARO\CapaEntidad\bin\Debug\CapaEntidad.pdb
+E:\repo\ElFaroV1\ELFARO\CapaEntidad\obj\Debug\CapaEntidad.csproj.AssemblyReference.cache
+E:\repo\ElFaroV1\ELFARO\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
+E:\repo\ElFaroV1\ELFARO\CapaEntidad\obj\Debug\CapaEntidad.dll
+E:\repo\ElFaroV1\ELFARO\CapaEntidad\obj\Debug\CapaEntidad.pdb

@@ -5,10 +5,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Drawing.Drawing2D;
+using System.Windows.Forms;
 
 namespace CapaLogica
 {
-    internal class logPlatillo
+    public class logPlatillo
     {
         #region sigleton
         //Patron Singleton
@@ -29,6 +31,10 @@ namespace CapaLogica
         public List<entPlatillo> ListarPlatillo()
         {
             return datPlatillo.Instancia.ListarPlatillo();
+        }
+        public void MostrarPlatillo(ComboBox CB)
+        {
+           datPlatillo.Instancia.LoadPlatillos(CB);
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaLogica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,20 +13,30 @@ namespace ElFaroV1
 {
     public partial class FormMozo : Form
     {
+        private Dictionary<string, logPedido> pedidos;
         public FormMozo()
         {
             InitializeComponent();
+            InicializarMesas();
         }
 
-        private void FormMozo_Load(object sender, EventArgs e)
+        private void InicializarMesas()
         {
-
+            pedidos = new Dictionary<string, logPedido>();
+            for (int i = 1; i <= 24; i++)
+            {
+                string mesaId = $"MesaA{i}"; // Utiliza la misma convención de claves
+                pedidos.Add(mesaId, new logPedido(mesaId));
+            }
         }
 
         private void btnMesaA1_Click(object sender, EventArgs e)
         {
-            ISMozo IS = new ISMozo();
-            IS.ShowDialog();
+            //FormMesa IS = new FormMesa();
+            //IS.ShowDialog();
+            string mesaSeleccionada = "MesaA1";
+            var formMesa = new FormMesa(pedidos[mesaSeleccionada]);
+            formMesa.Show();
         }
     }
 }
