@@ -36,5 +36,27 @@ namespace CapaLogica
         {
            datPlatillo.Instancia.LoadPlatillos(CB);
         }
+                public List<entPlatillo> ListarPlatillo()
+        {
+            return datPlatillo.Instancia.ListarPlatillo();
+        }
+        public void MostrarPlatillo(ComboBox CB)
+        {
+           datPlatillo.Instancia.LoadPlatillos(CB);
+        }
+        public void InsertarPlatillo(entPlatillo p)
+        {
+            datPlatillo.Instancia.InsertarPlatillo(p);
+        }
+
+        public void EliminarPlatillo(string n )
+        {
+            datPlatillo.Instancia.EliminarPlatillo(n);
+        }
+
+        public void EditarPlatillo(string n, int p)
+        {
+            datPlatillo.Instancia.EditarPlatillo(n,p);
+        }
     }
 }
