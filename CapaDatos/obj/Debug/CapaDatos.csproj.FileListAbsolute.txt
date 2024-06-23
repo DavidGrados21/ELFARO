@@ -16,3 +16,12 @@ E:\repo\ElFaroV1\ELFARO\CapaDatos\obj\Debug\CapaDatos.csproj.CoreCompileInputs.c
 E:\repo\ElFaroV1\ELFARO\CapaDatos\obj\Debug\CapaDatos.csproj.CopyComplete
 E:\repo\ElFaroV1\ELFARO\CapaDatos\obj\Debug\CapaDatos.dll
 E:\repo\ElFaroV1\ELFARO\CapaDatos\obj\Debug\CapaDatos.pdb
+C:\Users\David\source\repos\V1\CapaDatos\bin\Debug\CapaDatos.dll
+C:\Users\David\source\repos\V1\CapaDatos\bin\Debug\CapaDatos.pdb
+C:\Users\David\source\repos\V1\CapaDatos\bin\Debug\CapaEntidad.dll
+C:\Users\David\source\repos\V1\CapaDatos\bin\Debug\CapaEntidad.pdb
+C:\Users\David\source\repos\V1\CapaDatos\obj\Debug\CapaDatos.csproj.AssemblyReference.cache
+C:\Users\David\source\repos\V1\CapaDatos\obj\Debug\CapaDatos.csproj.CoreCompileInputs.cache
+C:\Users\David\source\repos\V1\CapaDatos\obj\Debug\CapaDatos.csproj.CopyComplete
+C:\Users\David\source\repos\V1\CapaDatos\obj\Debug\CapaDatos.dll
+C:\Users\David\source\repos\V1\CapaDatos\obj\Debug\CapaDatos.pdb

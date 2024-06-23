@@ -10,3 +10,9 @@ E:\repo\ElFaroV1\ELFARO\CapaEntidad\obj\Debug\CapaEntidad.csproj.AssemblyReferen
 E:\repo\ElFaroV1\ELFARO\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
 E:\repo\ElFaroV1\ELFARO\CapaEntidad\obj\Debug\CapaEntidad.dll
 E:\repo\ElFaroV1\ELFARO\CapaEntidad\obj\Debug\CapaEntidad.pdb
+C:\Users\David\source\repos\V1\CapaEntidad\bin\Debug\CapaEntidad.dll
+C:\Users\David\source\repos\V1\CapaEntidad\bin\Debug\CapaEntidad.pdb
+C:\Users\David\source\repos\V1\CapaEntidad\obj\Debug\CapaEntidad.csproj.AssemblyReference.cache
+C:\Users\David\source\repos\V1\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
+C:\Users\David\source\repos\V1\CapaEntidad\obj\Debug\CapaEntidad.dll
+C:\Users\David\source\repos\V1\CapaEntidad\obj\Debug\CapaEntidad.pdb

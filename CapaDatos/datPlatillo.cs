@@ -41,8 +41,8 @@ namespace CapaDatos
                 while (dr.Read())
                 {
                     entPlatillo Cli = new entPlatillo();
-                    Cli.NombrePlatillo = dr["NombreDelPlatillo"].ToString();
-                    Cli.Precio = Convert.ToDouble(dr["PrecioDelPlatillo"]);;
+                    Cli.NombrePlatillo = dr["NombrePlatillo"].ToString();
+                    Cli.Precio = Convert.ToDouble(dr["Precio"]);;
                     lista.Add(Cli);
                 }
 
