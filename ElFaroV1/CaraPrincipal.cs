@@ -19,8 +19,8 @@ namespace ElFaroV1
 
         private void btnMozo_Click(object sender, EventArgs e)
         {
-            FormMozo Mozo= new FormMozo();
-            Mozo.ShowDialog();
+            MantenedorPlatillo mp = new MantenedorPlatillo();
+            mp.ShowDialog();
         }
 
         private void btnAdmin_Click(object sender, EventArgs e)
@@ -31,7 +31,7 @@ namespace ElFaroV1
 
         private void btnAlmacen_Click(object sender, EventArgs e)
         {
-            FormAlmacen Alma= new FormAlmacen();
+            RealizaOrdenPedidoInsumos Alma= new RealizaOrdenPedidoInsumos();
             Alma.ShowDialog();
         }
     }

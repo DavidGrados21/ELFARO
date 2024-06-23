@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace CapaLogica
 {
-    public partial class FormMesa : Form
+    public partial class RealizaPedido : Form
     {
         private logPedido pedidoActual;
 
-        public FormMesa(logPedido pedido)
+        public RealizaPedido(logPedido pedido)
         {
             InitializeComponent();
             pedidoActual = pedido;

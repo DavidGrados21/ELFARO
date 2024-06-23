@@ -52,23 +52,42 @@
     <Compile Include="CaraPrincipal.Designer.cs">
       <DependentUpon>CaraPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormAlmacen.cs">
+    <Compile Include="RealizaOrdenPedidoInsumos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormAlmacen.Designer.cs">
-      <DependentUpon>FormAlmacen.cs</DependentUpon>
+    <Compile Include="RealizaOrdenPedidoInsumos.Designer.cs">
+      <DependentUpon>RealizaOrdenPedidoInsumos.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormMesa.cs">
+    <Compile Include="logPedido.cs" />
+    <Compile Include="MantenedorInsumos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMesa.Designer.cs">
-      <DependentUpon>FormMesa.cs</DependentUpon>
+    <Compile Include="MantenedorInsumos.Designer.cs">
+      <DependentUpon>MantenedorInsumos.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormMozo.cs">
+    <Compile Include="MantenedorInsumosPorPlatillo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormMozo.Designer.cs">
-      <DependentUpon>FormMozo.cs</DependentUpon>
+    <Compile Include="MantenedorInsumosPorPlatillo.Designer.cs">
+      <DependentUpon>MantenedorInsumosPorPlatillo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenedorMetodoPago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenedorMetodoPago.Designer.cs">
+      <DependentUpon>MantenedorMetodoPago.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MantenedorPlatillo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenedorPlatillo.Designer.cs">
+      <DependentUpon>MantenedorPlatillo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RealizaPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RealizaPedido.Designer.cs">
+      <DependentUpon>RealizaPedido.cs</DependentUpon>
     </Compile>
     <Compile Include="ISAdmin.cs">
       <SubType>Form</SubType>
@@ -81,14 +100,14 @@
     <EmbeddedResource Include="CaraPrincipal.resx">
       <DependentUpon>CaraPrincipal.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormAlmacen.resx">
-      <DependentUpon>FormAlmacen.cs</DependentUpon>
+    <EmbeddedResource Include="MantenedorPlatillo.resx">
+      <DependentUpon>MantenedorPlatillo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormMesa.resx">
-      <DependentUpon>FormMesa.cs</DependentUpon>
+    <EmbeddedResource Include="RealizaOrdenPedidoInsumos.resx">
+      <DependentUpon>RealizaOrdenPedidoInsumos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormMozo.resx">
-      <DependentUpon>FormMozo.cs</DependentUpon>
+    <EmbeddedResource Include="RealizaPedido.resx">
+      <DependentUpon>RealizaPedido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ISAdmin.resx">
       <DependentUpon>ISAdmin.cs</DependentUpon>

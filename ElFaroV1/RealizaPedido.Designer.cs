@@ -1,6 +1,6 @@
 ﻿namespace CapaLogica
 {
-    partial class FormMesa
+    partial class RealizaPedido
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMesa));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RealizaPedido));
             this.GBDatosMozo = new System.Windows.Forms.GroupBox();
             this.btnIniciarSesion = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
