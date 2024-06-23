@@ -1,6 +1,6 @@
 ﻿namespace ElFaroV1
 {
-    partial class FormAlmacen
+    partial class RealizaOrdenPedidoInsumos
     {
         /// <summary>
         /// Required designer variable.

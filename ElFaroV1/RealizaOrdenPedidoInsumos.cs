@@ -12,10 +12,10 @@ using System.Windows.Forms;
 
 namespace ElFaroV1
 {
-    public partial class FormAlmacen : Form
+    public partial class RealizaOrdenPedidoInsumos : Form
     {
         string insumoSeleccionado;
-        public FormAlmacen()
+        public RealizaOrdenPedidoInsumos()
         {
             InitializeComponent();
             AgregarOpcionesComboBox();
