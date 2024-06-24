@@ -161,7 +161,7 @@
             this.labelMesa.TabIndex = 5;
             this.labelMesa.Text = ".";
             // 
-            // FormMesa
+            // RealizaPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -170,8 +170,9 @@
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.GBPedido);
             this.Controls.Add(this.GBDatosMozo);
-            this.Name = "FormMesa";
-            this.Text = "FormMesa";
+            this.Name = "RealizaPedido";
+            this.Text = "RealizaPedido";
+            this.Load += new System.EventHandler(this.RealizaPedido_Load);
             this.GBDatosMozo.ResumeLayout(false);
             this.GBDatosMozo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).EndInit();

@@ -34,3 +34,12 @@ C:\Work_space\MOANSO\Proyecto\Far\CapaDatos\obj\Debug\CapaDatos.csproj.CoreCompi
 C:\Work_space\MOANSO\Proyecto\Far\CapaDatos\obj\Debug\CapaDatos.csproj.CopyComplete
 C:\Work_space\MOANSO\Proyecto\Far\CapaDatos\obj\Debug\CapaDatos.dll
 C:\Work_space\MOANSO\Proyecto\Far\CapaDatos\obj\Debug\CapaDatos.pdb
+C:\Work_space\MOANSO\Proyecto\ProyectoFinal1\CapaDatos\bin\Debug\CapaDatos.dll
+C:\Work_space\MOANSO\Proyecto\ProyectoFinal1\CapaDatos\bin\Debug\CapaDatos.pdb
+C:\Work_space\MOANSO\Proyecto\ProyectoFinal1\CapaDatos\bin\Debug\CapaEntidad.dll
+C:\Work_space\MOANSO\Proyecto\ProyectoFinal1\CapaDatos\bin\Debug\CapaEntidad.pdb
+C:\Work_space\MOANSO\Proyecto\ProyectoFinal1\CapaDatos\obj\Debug\CapaDatos.csproj.AssemblyReference.cache
+C:\Work_space\MOANSO\Proyecto\ProyectoFinal1\CapaDatos\obj\Debug\CapaDatos.csproj.CoreCompileInputs.cache
+C:\Work_space\MOANSO\Proyecto\ProyectoFinal1\CapaDatos\obj\Debug\CapaDatos.csproj.CopyComplete
+C:\Work_space\MOANSO\Proyecto\ProyectoFinal1\CapaDatos\obj\Debug\CapaDatos.dll
+C:\Work_space\MOANSO\Proyecto\ProyectoFinal1\CapaDatos\obj\Debug\CapaDatos.pdb

@@ -46,9 +46,9 @@ namespace CapaLogica
             datPlatillo.Instancia.EliminarPlatillo(n);
         }
 
-        public void EditarPlatillo(string n, int p)
+        public void EditarPlatillo(entPlatillo PL)
         {
-            datPlatillo.Instancia.EditarPlatillo(n,p);
+            datPlatillo.Instancia.EditarPlatillo(PL);
         }
     }
 }

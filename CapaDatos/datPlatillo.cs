@@ -42,7 +42,7 @@ namespace CapaDatos
                 {
                     entPlatillo Cli = new entPlatillo();
                     Cli.NombrePlatillo = dr["NombrePlatillo"].ToString();
-                    Cli.Precio = Convert.ToDouble(dr["Precio"]);;
+                    Cli.Precio = Convert.ToDecimal(dr["Precio"]);
                     lista.Add(Cli);
                 }
 

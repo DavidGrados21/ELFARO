@@ -9,9 +9,7 @@ namespace CapaEntidad
     public class entPlatillo
     {   
         public string NombrePlatillo { get; set; }
-        public double Precio { get; set; }
-
-        
+        public decimal Precio { get; set; }   
 
     }
 }

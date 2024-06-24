@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 
 namespace ElFaroV1
 {
@@ -32,7 +33,7 @@ namespace ElFaroV1
             {
                 entPlatillo p = new entPlatillo();
                 p.NombrePlatillo = txtNPlatillo.Text.Trim();
-                p.Precio = (int)nuPrecio.Value;
+                p.Precio = int.Parse(txtPrecio.Text.Trim());
                 logPlatillo.Instancia.InsertarPlatillo(p);
             }
             catch (Exception ex)
@@ -46,7 +47,7 @@ namespace ElFaroV1
         public void LimpiarVariables()
         {
             txtNPlatillo.Clear();
-            nuPrecio.Value = 0;
+            txtPrecio.Clear();
         }
 
         public void MostrarPlatillos()

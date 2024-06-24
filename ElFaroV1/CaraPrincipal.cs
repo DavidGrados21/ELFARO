@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaLogica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -35,6 +36,13 @@ namespace ElFaroV1
         {
             MantenedorInsumos Alma= new MantenedorInsumos();
             Alma.ShowDialog();
+        }
+
+        private void btnPedidos_Click(object sender, EventArgs e)
+        {
+           RealizaPedido rp= new RealizaPedido();   
+           rp.ShowDialog();
+            
         }
     }
 }

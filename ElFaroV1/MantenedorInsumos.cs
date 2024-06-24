@@ -81,5 +81,10 @@ namespace ElFaroV1
             listarInsumos();
 
         }
+
+        private void MantenedorInsumos_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

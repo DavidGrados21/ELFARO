@@ -31,14 +31,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.txtNPlatillo = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.dgPlatillo = new System.Windows.Forms.DataGridView();
-            this.nuPrecio = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtPrecio = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgPlatillo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nuPrecio)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -75,17 +73,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(578, 64);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(88, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Eliminar";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
             // txtNPlatillo
             // 
             this.txtNPlatillo.Location = new System.Drawing.Point(49, 37);
@@ -93,17 +80,6 @@
             this.txtNPlatillo.Name = "txtNPlatillo";
             this.txtNPlatillo.Size = new System.Drawing.Size(153, 20);
             this.txtNPlatillo.TabIndex = 6;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(578, 93);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(88, 23);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Editar";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // dgPlatillo
             // 
@@ -113,14 +89,6 @@
             this.dgPlatillo.Name = "dgPlatillo";
             this.dgPlatillo.Size = new System.Drawing.Size(504, 141);
             this.dgPlatillo.TabIndex = 9;
-            // 
-            // nuPrecio
-            // 
-            this.nuPrecio.Location = new System.Drawing.Point(378, 30);
-            this.nuPrecio.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.nuPrecio.Name = "nuPrecio";
-            this.nuPrecio.Size = new System.Drawing.Size(140, 20);
-            this.nuPrecio.TabIndex = 10;
             // 
             // label3
             // 
@@ -132,16 +100,33 @@
             this.label3.TabIndex = 11;
             this.label3.Text = "S/.";
             // 
+            // txtPrecio
+            // 
+            this.txtPrecio.Location = new System.Drawing.Point(392, 34);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(126, 20);
+            this.txtPrecio.TabIndex = 12;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(578, 64);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(88, 23);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Eliminar";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // MantenedorPlatillo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(679, 298);
+            this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.nuPrecio);
             this.Controls.Add(this.dgPlatillo);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.txtNPlatillo);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -155,7 +140,6 @@
             this.Name = "MantenedorPlatillo";
             this.Text = "MantenedorPlatillo";
             ((System.ComponentModel.ISupportInitialize)(this.dgPlatillo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nuPrecio)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -166,11 +150,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox txtNPlatillo;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.DataGridView dgPlatillo;
-        private System.Windows.Forms.NumericUpDown nuPrecio;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtPrecio;
+        private System.Windows.Forms.Button button2;
     }
 }

@@ -52,6 +52,24 @@
     <Compile Include="CaraPrincipal.Designer.cs">
       <DependentUpon>CaraPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="ConsultaIStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaIStock.Designer.cs">
+      <DependentUpon>ConsultaIStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaPedido.Designer.cs">
+      <DependentUpon>ConsultaPedido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsultaPlatillo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConsultaPlatillo.Designer.cs">
+      <DependentUpon>ConsultaPlatillo.cs</DependentUpon>
+    </Compile>
     <Compile Include="MantenedorInsumos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,8 +97,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RealizarOrdenCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RealizarOrdenCompra.Designer.cs">
+      <DependentUpon>RealizarOrdenCompra.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="CaraPrincipal.resx">
       <DependentUpon>CaraPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaIStock.resx">
+      <DependentUpon>ConsultaIStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaPedido.resx">
+      <DependentUpon>ConsultaPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsultaPlatillo.resx">
+      <DependentUpon>ConsultaPlatillo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MantenedorPlatillo.resx">
       <DependentUpon>MantenedorPlatillo.cs</DependentUpon>
@@ -103,6 +136,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="RealizarOrdenCompra.resx">
+      <DependentUpon>RealizarOrdenCompra.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -13,13 +13,9 @@ namespace CapaLogica
 {
     public partial class RealizaPedido : Form
     {
-        private logPedido pedidoActual;
-
-        public RealizaPedido(logPedido pedido)
+        public RealizaPedido()
         {
             InitializeComponent();
-            pedidoActual = pedido;
-            labelMesa.Text = pedidoActual.MesaId;
             InicializarDataGridView();
             ActualizarDataGridView();
             logPlatillo.Instancia.MostrarPlatillo(CBPlatillos);
@@ -35,11 +31,7 @@ namespace CapaLogica
 
         private void ActualizarDataGridView()
         {
-            dgvPedidos.Rows.Clear();
-            foreach (var item in pedidoActual.Items)
-            {
-                dgvPedidos.Rows.Add(item);
-            }
+
         }
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
@@ -47,6 +39,11 @@ namespace CapaLogica
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RealizaPedido_Load(object sender, EventArgs e)
         {
 
         }
