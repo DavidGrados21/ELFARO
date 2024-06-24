@@ -11,5 +11,7 @@ namespace CapaEntidad
         public string NombrePlatillo { get; set; }
         public double Precio { get; set; }
 
+        
+
     }
 }

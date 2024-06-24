@@ -21,6 +21,8 @@ namespace ElFaroV1
         {
             MantenedorPlatillo mp = new MantenedorPlatillo();
             mp.ShowDialog();
+
+
         }
 
         private void btnAdmin_Click(object sender, EventArgs e)
@@ -31,7 +33,7 @@ namespace ElFaroV1
 
         private void btnAlmacen_Click(object sender, EventArgs e)
         {
-            RealizaOrdenPedidoInsumos Alma= new RealizaOrdenPedidoInsumos();
+            MantenedorInsumos Alma= new MantenedorInsumos();
             Alma.ShowDialog();
         }
     }

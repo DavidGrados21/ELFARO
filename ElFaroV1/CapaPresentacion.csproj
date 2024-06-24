@@ -52,31 +52,13 @@
     <Compile Include="CaraPrincipal.Designer.cs">
       <DependentUpon>CaraPrincipal.cs</DependentUpon>
     </Compile>
-    <Compile Include="RealizaOrdenPedidoInsumos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RealizaOrdenPedidoInsumos.Designer.cs">
-      <DependentUpon>RealizaOrdenPedidoInsumos.cs</DependentUpon>
-    </Compile>
-    <Compile Include="logPedido.cs" />
     <Compile Include="MantenedorInsumos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MantenedorInsumos.Designer.cs">
       <DependentUpon>MantenedorInsumos.cs</DependentUpon>
     </Compile>
-    <Compile Include="MantenedorInsumosPorPlatillo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MantenedorInsumosPorPlatillo.Designer.cs">
-      <DependentUpon>MantenedorInsumosPorPlatillo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="MantenedorMetodoPago.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MantenedorMetodoPago.Designer.cs">
-      <DependentUpon>MantenedorMetodoPago.cs</DependentUpon>
-    </Compile>
+    <Compile Include="logPedido.cs" />
     <Compile Include="MantenedorPlatillo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,8 +85,8 @@
     <EmbeddedResource Include="MantenedorPlatillo.resx">
       <DependentUpon>MantenedorPlatillo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RealizaOrdenPedidoInsumos.resx">
-      <DependentUpon>RealizaOrdenPedidoInsumos.cs</DependentUpon>
+    <EmbeddedResource Include="MantenedorInsumos.resx">
+      <DependentUpon>MantenedorInsumos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RealizaPedido.resx">
       <DependentUpon>RealizaPedido.cs</DependentUpon>

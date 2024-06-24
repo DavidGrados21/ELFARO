@@ -66,7 +66,7 @@
             this.btnMozo.Name = "btnMozo";
             this.btnMozo.Size = new System.Drawing.Size(195, 55);
             this.btnMozo.TabIndex = 2;
-            this.btnMozo.Text = "Mozo";
+            this.btnMozo.Text = "Cocinero";
             this.btnMozo.UseVisualStyleBackColor = true;
             this.btnMozo.Click += new System.EventHandler(this.btnMozo_Click);
             // 
