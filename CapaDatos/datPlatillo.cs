@@ -145,33 +145,32 @@ namespace CapaDatos
 
         }
         
-        public Boolean EditarPlatillo(String n, int p)
+        public Boolean EditarPlatillo(entPlatillo Cli)
         {
             SqlCommand cmd = null;
             Boolean edita = false;
-            try
+        try
+        {
+            SqlConnection cn = Conexion.Instancia.Conectar();
+            cmd = new SqlCommand("spEditaPlatillo", cn);
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@NombrePlatillo", Cli.NombrePlatillo);
+            cmd.Parameters.AddWithValue("@NuevoNombrePlatillo", Cli.NombrePlatillo);
+            cmd.Parameters.AddWithValue("@Precio ", Cli.Precio);
+        
+            cn.Open();
+            int i = cmd.ExecuteNonQuery();
+            if (i > 0)
             {
-                SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spEditaPlatillo", cn);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@NombrePlatillo", n);
-                cmd.Parameters.AddWithValue("@Precio ", p);
-                
-                cn.Open();
-                int i = cmd.ExecuteNonQuery();
-                if (i > 0)
-                {
-                    edita = true;
-                }
+                edita = true;
             }
-            catch (Exception e)
-            {
-                throw e;
-            }
-            finally { cmd.Connection.Close(); }
-            return edita;
         }
-
-
+        catch (Exception e)
+        {
+        throw e;
+        }
+        finally { cmd.Connection.Close(); }
+        return edita;
+      }
     }
 }
