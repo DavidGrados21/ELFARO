@@ -145,7 +145,7 @@ namespace CapaDatos
 
         }
         
-        public Boolean EditarPlatillo(entPlatillo Cli)
+        public Boolean EditarPlatillo(entPlatillo Cli, string nombre)
         {
             SqlCommand cmd = null;
             Boolean edita = false;
@@ -155,7 +155,7 @@ namespace CapaDatos
             cmd = new SqlCommand("spEditaPlatillo", cn);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.AddWithValue("@NombrePlatillo", Cli.NombrePlatillo);
-            cmd.Parameters.AddWithValue("@NuevoNombrePlatillo", Cli.NombrePlatillo);
+            cmd.Parameters.AddWithValue("@NuevoNombrePlatillo", nombre);
             cmd.Parameters.AddWithValue("@Precio ", Cli.Precio);
         
             cn.Open();
@@ -167,10 +167,105 @@ namespace CapaDatos
         }
         catch (Exception e)
         {
-        throw e;
+            throw e;
         }
-        finally { cmd.Connection.Close(); }
-        return edita;
-      }
+            finally { cmd.Connection.Close(); }
+            return edita;
+        }
+        public decimal ObtenerPrecio(string nombrePlatillo)
+        {
+            decimal precio = 0;
+            try
+            {
+                using (SqlConnection cn = Conexion.Instancia.Conectar())
+                {
+                    SqlCommand cmd = new SqlCommand("spObtenerPrecioPlatillo", cn);
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    // Agregar el parámetro @p_nombre_platillo y asignarle el valor
+                    cmd.Parameters.AddWithValue("@p_nombre_platillo", nombrePlatillo);
+
+                    cn.Open();
+
+                    using (SqlDataReader dr = cmd.ExecuteReader())
+                    {
+                        if (dr.Read() && dr["PrecioDelPlatillo"] != DBNull.Value)
+                        {
+                            precio = Convert.ToDecimal(dr["PrecioDelPlatillo"]);
+                        }
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Error al obtener el precio del platillo", e);
+            }
+
+            return precio;
+        }
+        public Boolean InsertarPedido(entPlatillo PL, int n)
+        {
+            SqlCommand cmd = null;
+            Boolean inserta = false;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("spInsertaPedido", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@NumerodePlatillo", n);
+                cmd.Parameters.AddWithValue("@NombrePlatillo", PL.NombrePlatillo);
+                cmd.Parameters.AddWithValue("@Precio", PL.Precio);
+                cn.Open();
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    inserta = true;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                if (cmd != null && cmd.Connection != null)
+                {
+                    cmd.Connection.Close();
+                }
+            }
+            return inserta;
+        }
+        public List<entPlatillo> ListarPedido()
+        {
+            SqlCommand cmd = null;
+            List<entPlatillo> Pedido = new List<entPlatillo>();
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar(); //singleton
+                cmd = new SqlCommand("spListarPedido", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    entPlatillo Cli = new entPlatillo();
+                    Cli.NombrePlatillo = dr["NombrePlatillo"].ToString();
+                    Cli.Precio = Convert.ToInt32(dr["Precio"]);
+                    Pedido.Add(Cli);
+                }
+
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                cmd.Connection.Close();
+            }
+            return Pedido;
+        }
+
+
     }
 }

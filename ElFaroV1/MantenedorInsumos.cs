@@ -29,12 +29,13 @@ namespace ElFaroV1
         }
         public void listarInsumos()
         {
-            dgvAlmacen.DataSource = logInsumos.Instancia.ListarInsumosCL();
+            dgvAlmacen.DataSource = logInsumo.Instancia.ListarInsumosCL();
         }
         public void LimpiarVariables()
         {
             txtNombreImsumos.Clear();
             txtCantidadInsumos.Clear();
+            CBInsumos.SelectedIndex = -1;
         }
 
 
@@ -43,11 +44,11 @@ namespace ElFaroV1
             //insertar
             try
             {
-                entInsumos c = new entInsumos();
+                entInsumo c = new entInsumo();
                 c.NombreInsumos = txtNombreImsumos.Text.Trim();
                 c.Cantidad = int.Parse(txtCantidadInsumos.Text.Trim());
-                string UM = CBInsumos.SelectedItem.ToString();
-                logInsumos.Instancia.InsertaInsumosCL(c, UM);
+                c.UM = CBInsumos.SelectedItem.ToString();
+                logInsumo.Instancia.InsertaInsumosCL(c);
             }
             catch (Exception ex)
             {
@@ -71,7 +72,7 @@ namespace ElFaroV1
         {
             try
             {
-                logInsumos.Instancia.DeshabilitarCliente(insumoSeleccionado);
+                logInsumo.Instancia.EliminaInsumo(insumoSeleccionado);
             }
             catch (Exception ex)
             {
@@ -82,9 +83,35 @@ namespace ElFaroV1
 
         }
 
-        private void MantenedorInsumos_Load(object sender, EventArgs e)
+        private void dgvAlmacen_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            DataGridViewRow filaActual = dgvAlmacen.Rows[e.RowIndex];
+            txtNombreImsumos.Text = filaActual.Cells[0].Value.ToString();
+            txtCantidadInsumos.Text = filaActual.Cells[1].Value.ToString();
+            txtFalse.Text = filaActual.Cells[0].Value.ToString();
+            string du = filaActual.Cells[2].Value.ToString();
+            if (du == "Kilogramos"){CBInsumos.SelectedIndex = 0;}
+            else if (du == "Litros"){CBInsumos.SelectedIndex = 1;}
+            else{CBInsumos.SelectedIndex = 2;}
+        }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                entInsumo c = new entInsumo();
+                c.NombreInsumos = txtFalse.Text.Trim();
+                string n = txtNombreImsumos.Text;
+                c.Cantidad = int.Parse(txtCantidadInsumos.Text.Trim());
+                c.UM = CBInsumos.SelectedItem.ToString();
+                logInsumo.Instancia.EditarInsumo(c,n);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error.." + ex);
+            }
+            LimpiarVariables();
+            listarInsumos();
         }
     }
 }

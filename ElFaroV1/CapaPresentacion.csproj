@@ -70,13 +70,18 @@
     <Compile Include="ConsultaPlatillo.Designer.cs">
       <DependentUpon>ConsultaPlatillo.cs</DependentUpon>
     </Compile>
+    <Compile Include="MantenedorFormaDePago.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenedorFormaDePago.Designer.cs">
+      <DependentUpon>MantenedorFormaDePago.cs</DependentUpon>
+    </Compile>
     <Compile Include="MantenedorInsumos.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MantenedorInsumos.Designer.cs">
       <DependentUpon>MantenedorInsumos.cs</DependentUpon>
     </Compile>
-    <Compile Include="logPedido.cs" />
     <Compile Include="MantenedorPlatillo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultaPlatillo.resx">
       <DependentUpon>ConsultaPlatillo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MantenedorFormaDePago.resx">
+      <DependentUpon>MantenedorFormaDePago.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MantenedorPlatillo.resx">
       <DependentUpon>MantenedorPlatillo.cs</DependentUpon>

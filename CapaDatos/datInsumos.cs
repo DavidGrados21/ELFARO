@@ -26,10 +26,10 @@ namespace CapaDatos
         #endregion singleton
 
         ////////////////////listado de Clientes
-        public List<entInsumos> ListarInsumos()
+        public List<entInsumo> ListarInsumos()
         {
             SqlCommand cmd = null;
-            List<entInsumos> lista = new List<entInsumos>();
+            List<entInsumo> lista = new List<entInsumo>();
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar(); //singleton
@@ -39,7 +39,7 @@ namespace CapaDatos
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
-                    entInsumos insumo = new entInsumos();
+                    entInsumo insumo = new entInsumo();
                     insumo.NombreInsumos = dr["NombreInsumo"].ToString();
                     insumo.Cantidad = Convert.ToDouble(dr["CantidadInsumo"]);
                     insumo.UM = dr["UnidadMedida"].ToString(); 
@@ -61,7 +61,7 @@ namespace CapaDatos
         }
 
         /////////////////////////InsertaCliente
-        public Boolean InsertarInsumos(entInsumos Cli, string UM)
+        public Boolean InsertarInsumos(entInsumo Cli)
         {
             SqlCommand cmd = null;
             Boolean inserta = false;
@@ -72,7 +72,7 @@ namespace CapaDatos
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@NombreInsumo", Cli.NombreInsumos);
                 cmd.Parameters.AddWithValue("@CantidadInsumo", Cli.Cantidad);
-                cmd.Parameters.AddWithValue("@UnidadMedida", UM);
+                cmd.Parameters.AddWithValue("@UnidadMedida", Cli.UM);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -117,6 +117,34 @@ namespace CapaDatos
             finally { cmd.Connection.Close(); }
             return delete;
 
+        }
+        public Boolean EditarInsumos(entInsumo Cli, string nombre)
+        {
+            SqlCommand cmd = null;
+            Boolean edita = false;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("spEditaInsumo", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@NombreInsumo", Cli.NombreInsumos);
+                cmd.Parameters.AddWithValue("@NuevoNombreInsumo", nombre);
+                cmd.Parameters.AddWithValue("@CantidadInsumo ", Cli.Cantidad);
+                cmd.Parameters.AddWithValue("@unidadMedida ", Cli.UM);
+
+                cn.Open();
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    edita = true;
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally { cmd.Connection.Close(); }
+            return edita;
         }
     }
 }

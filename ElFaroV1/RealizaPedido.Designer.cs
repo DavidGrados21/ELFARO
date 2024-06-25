@@ -38,9 +38,9 @@
             this.CBPlatillos = new System.Windows.Forms.ComboBox();
             this.dgvPedidos = new System.Windows.Forms.DataGridView();
             this.GBPedido = new System.Windows.Forms.GroupBox();
+            this.btnImprimir = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.labelMesa = new System.Windows.Forms.Label();
             this.GBDatosMozo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).BeginInit();
             this.GBPedido.SuspendLayout();
@@ -114,22 +114,33 @@
             // dgvPedidos
             // 
             this.dgvPedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPedidos.Location = new System.Drawing.Point(10, 75);
+            this.dgvPedidos.Location = new System.Drawing.Point(10, 66);
             this.dgvPedidos.Name = "dgvPedidos";
-            this.dgvPedidos.Size = new System.Drawing.Size(405, 233);
+            this.dgvPedidos.Size = new System.Drawing.Size(405, 215);
             this.dgvPedidos.TabIndex = 2;
             // 
             // GBPedido
             // 
+            this.GBPedido.Controls.Add(this.btnImprimir);
             this.GBPedido.Controls.Add(this.btnAgregar);
             this.GBPedido.Controls.Add(this.dgvPedidos);
             this.GBPedido.Controls.Add(this.CBPlatillos);
             this.GBPedido.Location = new System.Drawing.Point(213, 12);
             this.GBPedido.Name = "GBPedido";
-            this.GBPedido.Size = new System.Drawing.Size(439, 314);
+            this.GBPedido.Size = new System.Drawing.Size(434, 315);
             this.GBPedido.TabIndex = 3;
             this.GBPedido.TabStop = false;
             this.GBPedido.Text = "Pedido";
+            // 
+            // btnImprimir
+            // 
+            this.btnImprimir.Location = new System.Drawing.Point(311, 287);
+            this.btnImprimir.Name = "btnImprimir";
+            this.btnImprimir.Size = new System.Drawing.Size(104, 22);
+            this.btnImprimir.TabIndex = 4;
+            this.btnImprimir.Text = "Metodo de Pago";
+            this.btnImprimir.UseVisualStyleBackColor = true;
+            this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // btnAgregar
             // 
@@ -144,29 +155,18 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(12, 222);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 184);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(186, 99);
+            this.pictureBox1.Size = new System.Drawing.Size(186, 143);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
-            // 
-            // labelMesa
-            // 
-            this.labelMesa.AutoSize = true;
-            this.labelMesa.Font = new System.Drawing.Font("Stencil", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelMesa.Location = new System.Drawing.Point(62, 191);
-            this.labelMesa.Name = "labelMesa";
-            this.labelMesa.Size = new System.Drawing.Size(14, 19);
-            this.labelMesa.TabIndex = 5;
-            this.labelMesa.Text = ".";
             // 
             // RealizaPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(652, 345);
-            this.Controls.Add(this.labelMesa);
+            this.ClientSize = new System.Drawing.Size(648, 345);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.GBPedido);
             this.Controls.Add(this.GBDatosMozo);
@@ -179,7 +179,6 @@
             this.GBPedido.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -195,7 +194,7 @@
         private System.Windows.Forms.GroupBox GBPedido;
         private System.Windows.Forms.Button btnIniciarSesion;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label labelMesa;
         private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Button btnImprimir;
     }
 }

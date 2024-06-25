@@ -53,7 +53,6 @@ namespace ElFaroV1
         public void MostrarPlatillos()
         {
             dgPlatillo.DataSource=logPlatillo.Instancia.ListarPlatillo();
-            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -65,14 +64,28 @@ namespace ElFaroV1
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void MantenedorPlatillo_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dgPlatillo_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            DataGridViewRow filaActual = dgPlatillo.Rows[e.RowIndex];
+            txtNPlatillo.Text = filaActual.Cells[0].Value.ToString();
+            NombreFalse.Text = filaActual.Cells[0].Value.ToString();
+            txtPrecio.Text = filaActual.Cells[1].Value.ToString();
+        }
+
+        private void button3_Click_1(object sender, EventArgs e)
         {
             try
             {
                 entPlatillo c = new entPlatillo();
-                c.NombrePlatillo = txtNPlatillo.Text.Trim();
+                c.NombrePlatillo = NombreFalse.Text.Trim();
+                string n = txtNPlatillo.Text;
                 c.Precio = decimal.Parse(txtPrecio.Text.Trim());
-                logPlatillo.Instancia.EditarPlatillo(c);
+                logPlatillo.Instancia.EditarPlatillo(c, n);
             }
             catch (Exception ex)
             {
@@ -80,7 +93,7 @@ namespace ElFaroV1
             }
             LimpiarVariables();
             MostrarPlatillos();
-        }
 
+        }
     }
 }

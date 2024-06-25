@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="logInsumos.cs" />
+    <Compile Include="logInsumo.cs" />
     <Compile Include="logPedido.cs" />
     <Compile Include="logPlatillo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

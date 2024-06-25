@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaEntidad
 {
-    public class entInsumos
+    public class entInsumo
     {
         public string NombreInsumos { get; set; }
         public double Cantidad { get; set; }

@@ -36,6 +36,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtPrecio = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.NombreFalse = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgPlatillo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,7 +46,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(77, 9);
+            this.label1.Location = new System.Drawing.Point(13, 29);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(110, 13);
@@ -54,7 +56,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(421, 9);
+            this.label2.Location = new System.Drawing.Point(13, 82);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(43, 13);
@@ -64,7 +66,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(578, 24);
+            this.button1.Location = new System.Drawing.Point(289, 29);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(88, 23);
@@ -75,25 +77,26 @@
             // 
             // txtNPlatillo
             // 
-            this.txtNPlatillo.Location = new System.Drawing.Point(49, 37);
+            this.txtNPlatillo.Location = new System.Drawing.Point(12, 48);
             this.txtNPlatillo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtNPlatillo.Name = "txtNPlatillo";
-            this.txtNPlatillo.Size = new System.Drawing.Size(153, 20);
+            this.txtNPlatillo.Size = new System.Drawing.Size(251, 20);
             this.txtNPlatillo.TabIndex = 6;
             // 
             // dgPlatillo
             // 
             this.dgPlatillo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgPlatillo.Location = new System.Drawing.Point(14, 136);
+            this.dgPlatillo.Location = new System.Drawing.Point(8, 128);
             this.dgPlatillo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dgPlatillo.Name = "dgPlatillo";
-            this.dgPlatillo.Size = new System.Drawing.Size(504, 141);
+            this.dgPlatillo.Size = new System.Drawing.Size(369, 158);
             this.dgPlatillo.TabIndex = 9;
+            this.dgPlatillo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgPlatillo_CellContentClick);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(345, 37);
+            this.label3.Location = new System.Drawing.Point(13, 105);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(25, 13);
@@ -102,14 +105,14 @@
             // 
             // txtPrecio
             // 
-            this.txtPrecio.Location = new System.Drawing.Point(392, 34);
+            this.txtPrecio.Location = new System.Drawing.Point(45, 102);
             this.txtPrecio.Name = "txtPrecio";
             this.txtPrecio.Size = new System.Drawing.Size(126, 20);
             this.txtPrecio.TabIndex = 12;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(578, 64);
+            this.button2.Location = new System.Drawing.Point(289, 95);
             this.button2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(88, 23);
@@ -118,20 +121,41 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(289, 61);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(88, 23);
+            this.button3.TabIndex = 13;
+            this.button3.Text = "Editar";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            // 
+            // NombreFalse
+            // 
+            this.NombreFalse.Location = new System.Drawing.Point(12, 48);
+            this.NombreFalse.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.NombreFalse.Name = "NombreFalse";
+            this.NombreFalse.Size = new System.Drawing.Size(214, 20);
+            this.NombreFalse.TabIndex = 14;
+            // 
             // MantenedorPlatillo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(679, 298);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(400, 298);
+            this.Controls.Add(this.txtNPlatillo);
+            this.Controls.Add(this.NombreFalse);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.txtPrecio);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.dgPlatillo);
-            this.Controls.Add(this.txtNPlatillo);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.dgPlatillo);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -139,6 +163,7 @@
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "MantenedorPlatillo";
             this.Text = "MantenedorPlatillo";
+            this.Load += new System.EventHandler(this.MantenedorPlatillo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgPlatillo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -155,5 +180,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtPrecio;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TextBox NombreFalse;
     }
 }

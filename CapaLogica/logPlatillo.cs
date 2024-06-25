@@ -36,9 +36,17 @@ namespace CapaLogica
         {
            datPlatillo.Instancia.LoadPlatillos(CB);
         }
+        public List<entPlatillo> MostrarPedido()
+        {
+            return datPlatillo.Instancia.ListarPedido();
+        }
         public void InsertarPlatillo(entPlatillo p)
         {
             datPlatillo.Instancia.InsertarPlatillo(p);
+        }
+        public void InsertarPedido(entPlatillo p, int yu)
+        {
+            datPlatillo.Instancia.InsertarPedido(p,yu);
         }
 
         public void EliminarPlatillo(string n )
@@ -46,9 +54,14 @@ namespace CapaLogica
             datPlatillo.Instancia.EliminarPlatillo(n);
         }
 
-        public void EditarPlatillo(entPlatillo PL)
+        public void EditarPlatillo(entPlatillo PL, string nombre)
         {
-            datPlatillo.Instancia.EditarPlatillo(PL);
+            datPlatillo.Instancia.EditarPlatillo(PL, nombre);
+        }
+        public decimal Obtenerprecio (string nombre)
+        {
+            decimal p = datPlatillo.Instancia.ObtenerPrecio(nombre);
+            return p;
         }
     }
 }

@@ -8,37 +8,41 @@ using System.Threading.Tasks;
 
 namespace CapaLogica
 {
-    public class logInsumos
+    public class logInsumo
     {
         #region sigleton
         //Patron Singleton
         // Variable estática para la instancia
-        private static readonly logInsumos _instancia = new logInsumos();
+        private static readonly logInsumo _instancia = new logInsumo();
         //privado para evitar la instanciación directa
-        public static logInsumos Instancia
+        public static logInsumo Instancia
         {
             get
             {
-                return logInsumos._instancia;
+                return logInsumo._instancia;
             }
         }
         #endregion singleton
 
         ///listado
-        public List<entInsumos> ListarInsumosCL()
+        public List<entInsumo> ListarInsumosCL()
         {
             return datInsumos.Instancia.ListarInsumos();
         }
 
         ///inserta
-        public void InsertaInsumosCL(entInsumos Cli, string UM)
+        public void InsertaInsumosCL(entInsumo Cli)
         {
-            datInsumos.Instancia.InsertarInsumos(Cli, UM);
+            datInsumos.Instancia.InsertarInsumos(Cli);
         }
 
-        public void DeshabilitarCliente(string Cli)
+        public void EliminaInsumo(string Cli)
         {
             datInsumos.Instancia.EliminarInsumo(Cli);
+        }
+        public void EditarInsumo(entInsumo PL, string nombre)
+        {
+            datInsumos.Instancia.EditarInsumos(PL, nombre);
         }
     }
 }
