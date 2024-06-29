@@ -28,7 +28,6 @@ namespace ElFaroV1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //insertar
             try
             {
                 entPlatillo p = new entPlatillo();
@@ -57,11 +56,10 @@ namespace ElFaroV1
 
         private void button2_Click(object sender, EventArgs e)
         {
-            string nombre =txtNPlatillo.Text.Trim();
+            string nombre = txtNPlatillo.Text.Trim();
             logPlatillo.Instancia.EliminarPlatillo(nombre);
 
             MostrarPlatillos();
-
         }
 
         private void MantenedorPlatillo_Load(object sender, EventArgs e)

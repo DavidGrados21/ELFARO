@@ -16,5 +16,10 @@ namespace ElFaroV1
         {
             InitializeComponent();
         }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

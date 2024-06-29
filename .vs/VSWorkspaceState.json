@@ -2,6 +2,7 @@
   "ExpandedNodes": [
     "",
     "\\CapaDatos",
+    "\\CapaLogica",
     "\\ElFaroV1"
   ],
   "SelectedNode": "\\ElFaroV1\\RealizaPedido.cs",

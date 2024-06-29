@@ -82,11 +82,23 @@
     <Compile Include="MantenedorInsumos.Designer.cs">
       <DependentUpon>MantenedorInsumos.cs</DependentUpon>
     </Compile>
+    <Compile Include="MantenedorMozo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MantenedorMozo.Designer.cs">
+      <DependentUpon>MantenedorMozo.cs</DependentUpon>
+    </Compile>
     <Compile Include="MantenedorPlatillo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MantenedorPlatillo.Designer.cs">
       <DependentUpon>MantenedorPlatillo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MMCocina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MMCocina.Designer.cs">
+      <DependentUpon>MMCocina.cs</DependentUpon>
     </Compile>
     <Compile Include="RealizaPedido.cs">
       <SubType>Form</SubType>
@@ -123,11 +135,17 @@
     <EmbeddedResource Include="MantenedorFormaDePago.resx">
       <DependentUpon>MantenedorFormaDePago.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MantenedorMozo.resx">
+      <DependentUpon>MantenedorMozo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MantenedorPlatillo.resx">
       <DependentUpon>MantenedorPlatillo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MantenedorInsumos.resx">
       <DependentUpon>MantenedorInsumos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMCocina.resx">
+      <DependentUpon>MMCocina.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RealizaPedido.resx">
       <DependentUpon>RealizaPedido.cs</DependentUpon>

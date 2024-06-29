@@ -18,18 +18,10 @@ namespace ElFaroV1
             InitializeComponent();
         }
 
-        private void btnMozo_Click(object sender, EventArgs e)
-        {
-            MantenedorPlatillo mp = new MantenedorPlatillo();
-            mp.ShowDialog();
-
-
-        }
-
         private void btnAdmin_Click(object sender, EventArgs e)
         {
-            ISAdmin admin = new ISAdmin();
-            admin.ShowDialog();
+            MantenedorMozo mozo = new MantenedorMozo();
+            mozo.ShowDialog();
         }
 
         private void btnAlmacen_Click(object sender, EventArgs e)
@@ -43,6 +35,18 @@ namespace ElFaroV1
            RealizaPedido rp= new RealizaPedido();   
            rp.ShowDialog();
             
+        }
+
+        private void btnCocinero_Click(object sender, EventArgs e)
+        {
+            MMCocina mp = new MMCocina();
+            mp.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MantenedorFormaDePago FDP = new MantenedorFormaDePago();
+            FDP.Show();
         }
     }
 }

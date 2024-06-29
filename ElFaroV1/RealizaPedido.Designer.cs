@@ -38,12 +38,15 @@
             this.CBPlatillos = new System.Windows.Forms.ComboBox();
             this.dgvPedidos = new System.Windows.Forms.DataGridView();
             this.GBPedido = new System.Windows.Forms.GroupBox();
+            this.NUDMesa = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.GBDatosMozo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).BeginInit();
             this.GBPedido.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDMesa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -108,7 +111,7 @@
             this.CBPlatillos.FormattingEnabled = true;
             this.CBPlatillos.Location = new System.Drawing.Point(10, 28);
             this.CBPlatillos.Name = "CBPlatillos";
-            this.CBPlatillos.Size = new System.Drawing.Size(327, 21);
+            this.CBPlatillos.Size = new System.Drawing.Size(207, 21);
             this.CBPlatillos.TabIndex = 1;
             // 
             // dgvPedidos
@@ -116,35 +119,54 @@
             this.dgvPedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPedidos.Location = new System.Drawing.Point(10, 66);
             this.dgvPedidos.Name = "dgvPedidos";
-            this.dgvPedidos.Size = new System.Drawing.Size(405, 215);
+            this.dgvPedidos.Size = new System.Drawing.Size(529, 215);
             this.dgvPedidos.TabIndex = 2;
             // 
             // GBPedido
             // 
+            this.GBPedido.Controls.Add(this.NUDMesa);
+            this.GBPedido.Controls.Add(this.label3);
             this.GBPedido.Controls.Add(this.btnImprimir);
             this.GBPedido.Controls.Add(this.btnAgregar);
             this.GBPedido.Controls.Add(this.dgvPedidos);
             this.GBPedido.Controls.Add(this.CBPlatillos);
             this.GBPedido.Location = new System.Drawing.Point(213, 12);
             this.GBPedido.Name = "GBPedido";
-            this.GBPedido.Size = new System.Drawing.Size(434, 315);
+            this.GBPedido.Size = new System.Drawing.Size(545, 315);
             this.GBPedido.TabIndex = 3;
             this.GBPedido.TabStop = false;
             this.GBPedido.Text = "Pedido";
             // 
+            // NUDMesa
+            // 
+            this.NUDMesa.Location = new System.Drawing.Point(318, 28);
+            this.NUDMesa.Name = "NUDMesa";
+            this.NUDMesa.Size = new System.Drawing.Size(120, 20);
+            this.NUDMesa.TabIndex = 6;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(264, 26);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(48, 20);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "Mesa";
+            // 
             // btnImprimir
             // 
-            this.btnImprimir.Location = new System.Drawing.Point(311, 287);
+            this.btnImprimir.Location = new System.Drawing.Point(435, 287);
             this.btnImprimir.Name = "btnImprimir";
             this.btnImprimir.Size = new System.Drawing.Size(104, 22);
             this.btnImprimir.TabIndex = 4;
-            this.btnImprimir.Text = "Metodo de Pago";
+            this.btnImprimir.Text = "Detalle de compra";
             this.btnImprimir.UseVisualStyleBackColor = true;
             this.btnImprimir.Click += new System.EventHandler(this.btnImprimir_Click);
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(343, 26);
+            this.btnAgregar.Location = new System.Drawing.Point(467, 28);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(72, 22);
             this.btnAgregar.TabIndex = 3;
@@ -166,7 +188,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(648, 345);
+            this.ClientSize = new System.Drawing.Size(770, 337);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.GBPedido);
             this.Controls.Add(this.GBDatosMozo);
@@ -177,6 +199,8 @@
             this.GBDatosMozo.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).EndInit();
             this.GBPedido.ResumeLayout(false);
+            this.GBPedido.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NUDMesa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -196,5 +220,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnImprimir;
+        private System.Windows.Forms.NumericUpDown NUDMesa;
+        private System.Windows.Forms.Label label3;
     }
 }

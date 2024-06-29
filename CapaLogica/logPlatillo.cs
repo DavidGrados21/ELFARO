@@ -36,17 +36,9 @@ namespace CapaLogica
         {
            datPlatillo.Instancia.LoadPlatillos(CB);
         }
-        public List<entPlatillo> MostrarPedido()
-        {
-            return datPlatillo.Instancia.ListarPedido();
-        }
         public void InsertarPlatillo(entPlatillo p)
         {
             datPlatillo.Instancia.InsertarPlatillo(p);
-        }
-        public void InsertarPedido(entPlatillo p, int yu)
-        {
-            datPlatillo.Instancia.InsertarPedido(p,yu);
         }
 
         public void EliminarPlatillo(string n )

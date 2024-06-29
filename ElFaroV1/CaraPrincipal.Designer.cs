@@ -31,10 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CaraPrincipal));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnMozo = new System.Windows.Forms.Button();
+            this.btnCocinero = new System.Windows.Forms.Button();
             this.btnAdmin = new System.Windows.Forms.Button();
             this.btnAlmacen = new System.Windows.Forms.Button();
             this.btnPedidos = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -59,21 +60,21 @@
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
-            // btnMozo
+            // btnCocinero
             // 
-            this.btnMozo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMozo.Location = new System.Drawing.Point(308, 91);
-            this.btnMozo.Name = "btnMozo";
-            this.btnMozo.Size = new System.Drawing.Size(195, 55);
-            this.btnMozo.TabIndex = 2;
-            this.btnMozo.Text = "Cocinero";
-            this.btnMozo.UseVisualStyleBackColor = true;
-            this.btnMozo.Click += new System.EventHandler(this.btnMozo_Click);
+            this.btnCocinero.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCocinero.Location = new System.Drawing.Point(318, 82);
+            this.btnCocinero.Name = "btnCocinero";
+            this.btnCocinero.Size = new System.Drawing.Size(195, 55);
+            this.btnCocinero.TabIndex = 2;
+            this.btnCocinero.Text = "Cocinero";
+            this.btnCocinero.UseVisualStyleBackColor = true;
+            this.btnCocinero.Click += new System.EventHandler(this.btnCocinero_Click);
             // 
             // btnAdmin
             // 
             this.btnAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdmin.Location = new System.Drawing.Point(308, 30);
+            this.btnAdmin.Location = new System.Drawing.Point(318, 12);
             this.btnAdmin.Name = "btnAdmin";
             this.btnAdmin.Size = new System.Drawing.Size(195, 55);
             this.btnAdmin.TabIndex = 3;
@@ -84,7 +85,7 @@
             // btnAlmacen
             // 
             this.btnAlmacen.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlmacen.Location = new System.Drawing.Point(308, 152);
+            this.btnAlmacen.Location = new System.Drawing.Point(318, 158);
             this.btnAlmacen.Name = "btnAlmacen";
             this.btnAlmacen.Size = new System.Drawing.Size(195, 55);
             this.btnAlmacen.TabIndex = 4;
@@ -95,23 +96,35 @@
             // btnPedidos
             // 
             this.btnPedidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPedidos.Location = new System.Drawing.Point(308, 213);
+            this.btnPedidos.Location = new System.Drawing.Point(318, 228);
             this.btnPedidos.Name = "btnPedidos";
             this.btnPedidos.Size = new System.Drawing.Size(195, 55);
             this.btnPedidos.TabIndex = 5;
-            this.btnPedidos.Text = "Pedidos";
+            this.btnPedidos.Text = "Mozo";
             this.btnPedidos.UseVisualStyleBackColor = true;
             this.btnPedidos.Click += new System.EventHandler(this.btnPedidos_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(318, 305);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(195, 55);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "Caja";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // CaraPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(564, 372);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnPedidos);
             this.Controls.Add(this.btnAlmacen);
             this.Controls.Add(this.btnAdmin);
-            this.Controls.Add(this.btnMozo);
+            this.Controls.Add(this.btnCocinero);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Name = "CaraPrincipal";
@@ -126,10 +139,11 @@
 
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button btnMozo;
+        private System.Windows.Forms.Button btnCocinero;
         private System.Windows.Forms.Button btnAdmin;
         private System.Windows.Forms.Button btnAlmacen;
         private System.Windows.Forms.Button btnPedidos;
+        private System.Windows.Forms.Button button1;
     }
 }
 

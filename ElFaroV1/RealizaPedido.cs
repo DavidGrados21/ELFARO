@@ -14,26 +14,11 @@ namespace CapaLogica
 {
     public partial class RealizaPedido : Form
     {
-        int c = 0;
         public RealizaPedido()
         {
             InitializeComponent();
-            InicializarDataGridView();
-            ActualizarDataGridView();
             logPlatillo.Instancia.MostrarPlatillo(CBPlatillos);
             //GBPedido.Enabled = false;
-        }
-
-        private void InicializarDataGridView()
-        {
-            dgvPedidos.Columns.Clear();
-            dgvPedidos.Columns.Add("NombrePlatillo", "Nombre del Platillo");
-            dgvPedidos.Columns.Add("Precio", "Precio");
-        }
-
-        private void ActualizarDataGridView()
-        {
-
         }
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
@@ -44,7 +29,7 @@ namespace CapaLogica
         {
             string name = CBPlatillos.Text;
             decimal precio = logPlatillo.Instancia.Obtenerprecio(name);
-            c ++;
+            int c = (int)NUDMesa.Value;
             //textBox3.Text = precio.ToString();
 
             try
@@ -52,7 +37,7 @@ namespace CapaLogica
                 entPlatillo p = new entPlatillo();
                 p.NombrePlatillo = name;
                 p.Precio = precio;
-                logPlatillo.Instancia.InsertarPedido(p,c);
+                logPedido.Instancia.InsertarPedido(p,c);
             }
             catch (Exception ex)
             {
@@ -74,7 +59,20 @@ namespace CapaLogica
         }
         public void MostrarPedido()
         {
-            dgvPedidos.DataSource = logPlatillo.Instancia.MostrarPedido();
+            var pedidos = logPedido.Instancia.ListasPedidoM();
+
+            // Convertir los datos a una lista para poder agregar una columna de índice
+            var pedidosConIndice = pedidos
+                .Select((p, index) => new
+                {
+                    Numero = index + 1,
+                    NombrePlatillo = p.NombrePlatillo,
+                    Precio = p.Precio
+                })
+                .ToList();
+
+            dgvPedidos.DataSource = pedidosConIndice;
         }
+
     }
 }

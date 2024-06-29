@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CapaDatos;
+using CapaEntidad;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,24 +10,39 @@ namespace CapaLogica
 {
     public class logPedido
     {
-            public string MesaId { get; set; }
-            public List<string> Items { get; set; }
-
-            public logPedido(string mesaId)
+        #region sigleton
+        //Patron Singleton
+        // Variable estática para la instancia
+        private static readonly logPedido _instancia = new logPedido();
+        //privado para evitar la instanciación directa
+        public static logPedido Instancia
+        {
+            get
             {
-                MesaId = mesaId;
-                Items = new List<string>();
+                return logPedido._instancia;
             }
-
-            public void AgregarItem(string item)
-            {
-                Items.Add(item);
-            }
-
-            public override string ToString()
-            {
-                return $"Mesa {MesaId} - Pedidos: {string.Join(", ", Items)}";
-            }
+        }
+        #endregion singleton
+        public List<entPedido> ListasPedidoM()
+        {
+            return datPedido.Instancia.ListarPedidoM();
+        }
+        public List<entPedido> ListasPedidoC()
+        {
+            return datPedido.Instancia.ListarPedidoC();
+        }
+        public List<entPedido> FiltrarporMesa(int m)
+        {
+            return datPedido.Instancia.FiltrarPedidosPorMesa(m);
+        }
+        public List<entPedido> FiltrarporPlatillo(string p)
+        {
+            return datPedido.Instancia.FiltrarPedidosPorNombre(p);
+        }
+        public void InsertarPedido(entPlatillo p, int yu)
+        {
+            datPedido.Instancia.InsertarPedido(p, yu);
         }
 
     }
+}

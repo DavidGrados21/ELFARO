@@ -133,3 +133,5 @@ C:\Users\David\Source\Repos\V1\ElFaroV1\obj\Debug\ElFaroV1.ConsultaPlatillo.reso
 C:\Users\David\Source\Repos\V1\ElFaroV1\obj\Debug\ElFaroV1.MantenedorInsumos.resources
 C:\Users\David\Source\Repos\V1\ElFaroV1\obj\Debug\ElFaroV1.RealizarOrdenCompra.resources
 C:\Users\David\Source\Repos\V1\ElFaroV1\obj\Debug\ElFaroV1.MantenedorFormaDePago.resources
+C:\Users\David\source\repos\V1\ElFaroV1\obj\Debug\ElFaroV1.MMCocina.resources
+C:\Users\David\source\repos\V1\ElFaroV1\obj\Debug\ElFaroV1.MantenedorMozo.resources
