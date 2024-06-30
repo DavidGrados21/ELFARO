@@ -48,6 +48,7 @@
     <Compile Include="datMozo.cs" />
     <Compile Include="datPedido.cs" />
     <Compile Include="datPlatillo.cs" />
+    <Compile Include="datProveedor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

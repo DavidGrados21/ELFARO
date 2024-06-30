@@ -63,3 +63,16 @@ C:\Work_space\MOANSO\Proyecto\ProyectoFinal1\CapaLogica\bin\Debug\CapaEntidad.dl
 C:\Work_space\MOANSO\Proyecto\ProyectoFinal1\CapaLogica\bin\Debug\CapaDatos.pdb
 C:\Work_space\MOANSO\Proyecto\ProyectoFinal1\CapaLogica\bin\Debug\CapaEntidad.pdb
 C:\Work_space\MOANSO\Proyecto\ProyectoFinal1\CapaLogica\obj\Debug\CapaLogica.csproj.CopyComplete
+C:\Users\thali\OneDrive\Escritorio\VesionFinal\CapaLogica\bin\Debug\CapaLogica.dll
+C:\Users\thali\OneDrive\Escritorio\VesionFinal\CapaLogica\bin\Debug\CapaLogica.pdb
+C:\Users\thali\OneDrive\Escritorio\VesionFinal\CapaLogica\bin\Debug\CapaDatos.dll
+C:\Users\thali\OneDrive\Escritorio\VesionFinal\CapaLogica\bin\Debug\CapaEntidad.dll
+C:\Users\thali\OneDrive\Escritorio\VesionFinal\CapaLogica\bin\Debug\CapaDatos.pdb
+C:\Users\thali\OneDrive\Escritorio\VesionFinal\CapaLogica\bin\Debug\CapaEntidad.pdb
+C:\Users\thali\OneDrive\Escritorio\VesionFinal\CapaLogica\obj\Debug\CapaLogica.csproj.AssemblyReference.cache
+C:\Users\thali\OneDrive\Escritorio\VesionFinal\CapaLogica\obj\Debug\CapaLogica.Properties.Resources.resources
+C:\Users\thali\OneDrive\Escritorio\VesionFinal\CapaLogica\obj\Debug\CapaLogica.csproj.GenerateResource.cache
+C:\Users\thali\OneDrive\Escritorio\VesionFinal\CapaLogica\obj\Debug\CapaLogica.csproj.CoreCompileInputs.cache
+C:\Users\thali\OneDrive\Escritorio\VesionFinal\CapaLogica\obj\Debug\CapaLogica.csproj.CopyComplete
+C:\Users\thali\OneDrive\Escritorio\VesionFinal\CapaLogica\obj\Debug\CapaLogica.dll
+C:\Users\thali\OneDrive\Escritorio\VesionFinal\CapaLogica\obj\Debug\CapaLogica.pdb

@@ -29,8 +29,8 @@ namespace ElFaroV1
                 if (logMozo.Instancia.IniciarSesionAdmin(u, c))
                 {
                     MessageBox.Show("Bienvenido Administrador del Restaurante El Faro ", "Iniciar Sesion", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    MantenedorMozo mozo = new MantenedorMozo();
-                    mozo.ShowDialog();
+                    Mantenedores man = new Mantenedores();
+                    man.ShowDialog();
                 }
                 else
                 {

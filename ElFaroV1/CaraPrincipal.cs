@@ -48,5 +48,10 @@ namespace ElFaroV1
             MantenedorFormaDePago FDP = new MantenedorFormaDePago();
             FDP.Show();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
