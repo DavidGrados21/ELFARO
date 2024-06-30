@@ -44,16 +44,22 @@
             this.DTPFecha = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.dgMozo = new System.Windows.Forms.DataGridView();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.GBcuenta = new System.Windows.Forms.GroupBox();
+            this.RBefectivo = new System.Windows.Forms.RadioButton();
             this.label4 = new System.Windows.Forms.Label();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.RBtarjeta = new System.Windows.Forms.RadioButton();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.NombreFalse = new System.Windows.Forms.TextBox();
+            this.RBeventual = new System.Windows.Forms.RadioButton();
+            this.label9 = new System.Windows.Forms.Label();
+            this.RBContrato = new System.Windows.Forms.RadioButton();
+            this.GBhoras = new System.Windows.Forms.GroupBox();
+            this.txtHoras = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgMozo)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.GBcuenta.SuspendLayout();
+            this.GBhoras.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -167,7 +173,7 @@
             // 
             // DTPFecha
             // 
-            this.DTPFecha.Location = new System.Drawing.Point(194, 55);
+            this.DTPFecha.Location = new System.Drawing.Point(194, 57);
             this.DTPFecha.Name = "DTPFecha";
             this.DTPFecha.Size = new System.Drawing.Size(200, 20);
             this.DTPFecha.TabIndex = 14;
@@ -187,30 +193,31 @@
             this.dgMozo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgMozo.Location = new System.Drawing.Point(19, 173);
             this.dgMozo.Name = "dgMozo";
-            this.dgMozo.Size = new System.Drawing.Size(498, 157);
+            this.dgMozo.Size = new System.Drawing.Size(498, 244);
             this.dgMozo.TabIndex = 16;
             this.dgMozo.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgMozo_CellContentClick);
             // 
-            // groupBox1
+            // GBcuenta
             // 
-            this.groupBox1.Controls.Add(this.txtCuenta);
-            this.groupBox1.Location = new System.Drawing.Point(523, 278);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(241, 52);
-            this.groupBox1.TabIndex = 17;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "N॰ de Cuenta";
+            this.GBcuenta.Controls.Add(this.txtCuenta);
+            this.GBcuenta.Location = new System.Drawing.Point(523, 233);
+            this.GBcuenta.Name = "GBcuenta";
+            this.GBcuenta.Size = new System.Drawing.Size(241, 52);
+            this.GBcuenta.TabIndex = 17;
+            this.GBcuenta.TabStop = false;
+            this.GBcuenta.Text = "N॰ de Cuenta";
             // 
-            // radioButton1
+            // RBefectivo
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(529, 203);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(64, 17);
-            this.radioButton1.TabIndex = 7;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Efectivo";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.RBefectivo.AutoSize = true;
+            this.RBefectivo.Location = new System.Drawing.Point(529, 200);
+            this.RBefectivo.Name = "RBefectivo";
+            this.RBefectivo.Size = new System.Drawing.Size(64, 17);
+            this.RBefectivo.TabIndex = 7;
+            this.RBefectivo.TabStop = true;
+            this.RBefectivo.Text = "Efectivo";
+            this.RBefectivo.UseVisualStyleBackColor = true;
+            this.RBefectivo.CheckedChanged += new System.EventHandler(this.RBefectivo_CheckedChanged);
             // 
             // label4
             // 
@@ -221,16 +228,16 @@
             this.label4.TabIndex = 18;
             this.label4.Text = "Pago";
             // 
-            // radioButton2
+            // RBtarjeta
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(529, 226);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(58, 17);
-            this.radioButton2.TabIndex = 19;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Tarjeta";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.RBtarjeta.AutoSize = true;
+            this.RBtarjeta.Location = new System.Drawing.Point(599, 200);
+            this.RBtarjeta.Name = "RBtarjeta";
+            this.RBtarjeta.Size = new System.Drawing.Size(58, 17);
+            this.RBtarjeta.TabIndex = 19;
+            this.RBtarjeta.TabStop = true;
+            this.RBtarjeta.Text = "Tarjeta";
+            this.RBtarjeta.UseVisualStyleBackColor = true;
             // 
             // btnAgregar
             // 
@@ -269,20 +276,73 @@
             this.NombreFalse.Size = new System.Drawing.Size(100, 20);
             this.NombreFalse.TabIndex = 23;
             // 
+            // RBeventual
+            // 
+            this.RBeventual.AutoSize = true;
+            this.RBeventual.Location = new System.Drawing.Point(599, 332);
+            this.RBeventual.Name = "RBeventual";
+            this.RBeventual.Size = new System.Drawing.Size(67, 17);
+            this.RBeventual.TabIndex = 27;
+            this.RBeventual.TabStop = true;
+            this.RBeventual.Text = "Eventual";
+            this.RBeventual.UseVisualStyleBackColor = true;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(526, 305);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(93, 13);
+            this.label9.TabIndex = 26;
+            this.label9.Text = "Forma de contrato";
+            // 
+            // RBContrato
+            // 
+            this.RBContrato.AutoSize = true;
+            this.RBContrato.Location = new System.Drawing.Point(529, 332);
+            this.RBContrato.Name = "RBContrato";
+            this.RBContrato.Size = new System.Drawing.Size(65, 17);
+            this.RBContrato.TabIndex = 24;
+            this.RBContrato.TabStop = true;
+            this.RBContrato.Text = "Contrato";
+            this.RBContrato.UseVisualStyleBackColor = true;
+            this.RBContrato.CheckedChanged += new System.EventHandler(this.RBContrato_CheckedChanged);
+            // 
+            // GBhoras
+            // 
+            this.GBhoras.Controls.Add(this.txtHoras);
+            this.GBhoras.Location = new System.Drawing.Point(523, 365);
+            this.GBhoras.Name = "GBhoras";
+            this.GBhoras.Size = new System.Drawing.Size(241, 52);
+            this.GBhoras.TabIndex = 25;
+            this.GBhoras.TabStop = false;
+            this.GBhoras.Text = "N॰ de Horas Trabajadas";
+            // 
+            // txtHoras
+            // 
+            this.txtHoras.Location = new System.Drawing.Point(6, 32);
+            this.txtHoras.Name = "txtHoras";
+            this.txtHoras.Size = new System.Drawing.Size(229, 20);
+            this.txtHoras.TabIndex = 1;
+            // 
             // MantenedorMozo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(776, 342);
+            this.ClientSize = new System.Drawing.Size(776, 429);
+            this.Controls.Add(this.RBeventual);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.RBContrato);
+            this.Controls.Add(this.GBhoras);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.NombreFalse);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.RBtarjeta);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.RBefectivo);
+            this.Controls.Add(this.GBcuenta);
             this.Controls.Add(this.dgMozo);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.DTPFecha);
@@ -300,8 +360,10 @@
             this.Name = "MantenedorMozo";
             this.Text = "MantenedorMozo";
             ((System.ComponentModel.ISupportInitialize)(this.dgMozo)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.GBcuenta.ResumeLayout(false);
+            this.GBcuenta.PerformLayout();
+            this.GBhoras.ResumeLayout(false);
+            this.GBhoras.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -325,13 +387,18 @@
         private System.Windows.Forms.DateTimePicker DTPFecha;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DataGridView dgMozo;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.GroupBox GBcuenta;
+        private System.Windows.Forms.RadioButton RBefectivo;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton RBtarjeta;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox NombreFalse;
+        private System.Windows.Forms.RadioButton RBeventual;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.RadioButton RBContrato;
+        private System.Windows.Forms.GroupBox GBhoras;
+        private System.Windows.Forms.TextBox txtHoras;
     }
 }

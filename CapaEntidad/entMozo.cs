@@ -16,5 +16,6 @@ namespace CapaEntidad
         public string correo { get; set; }
         public int NdeCuenta { get; set; }
         public int pass { get; set; }
+        public decimal Hdetrabajo { get; set; }
     }
 }

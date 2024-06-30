@@ -55,5 +55,11 @@ namespace ElFaroV1
                 }
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MantenedorCliente FDP = new MantenedorCliente();
+            FDP.Show();
+        }
     }
 }

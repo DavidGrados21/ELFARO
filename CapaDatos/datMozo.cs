@@ -45,7 +45,8 @@ namespace CapaDatos
                     Cli.direccion = dr["Direccion"].ToString();
                     Cli.telefono = Convert.ToInt32(dr["Telefono"].ToString());
                     Cli.correo = dr["Correo_electronico"].ToString();
-                    Cli.NdeCuenta = Convert.ToInt32(dr["NdeCuent"].ToString());
+                    Cli.NdeCuenta = Convert.ToInt32(dr["NdeCuenta"].ToString());
+                    Cli.Hdetrabajo = Convert.ToDecimal(dr["Hdetrabajo"].ToString());
                     Cli.pass = Convert.ToInt32(dr["Contraseña"]);
                     lista.Add(Cli);
                 }
@@ -76,8 +77,9 @@ namespace CapaDatos
                 cmd.Parameters.AddWithValue("@Direccion", PL.direccion);
                 cmd.Parameters.AddWithValue("@Telefono", PL.telefono);
                 cmd.Parameters.AddWithValue("@Correo_electronico", PL.correo);
-                cmd.Parameters.AddWithValue("@NdeCuent", PL.NdeCuenta);
+                cmd.Parameters.AddWithValue("@NdeCuenta", PL.NdeCuenta);
                 cmd.Parameters.AddWithValue("@Contraseña", PL.pass);
+                cmd.Parameters.AddWithValue("@Hdetrabajo", PL.Hdetrabajo);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -114,9 +116,9 @@ namespace CapaDatos
                 cmd.Parameters.AddWithValue("@Direccion", PL.direccion);
                 cmd.Parameters.AddWithValue("@Telefono", PL.telefono);
                 cmd.Parameters.AddWithValue("@Correo_electronico", PL.correo);
-                cmd.Parameters.AddWithValue("@NdeCuent", PL.NdeCuenta);
+                cmd.Parameters.AddWithValue("@NdeCuenta", PL.NdeCuenta);
                 cmd.Parameters.AddWithValue("@Contraseña", PL.pass);
-
+                cmd.Parameters.AddWithValue("@Hdetrabajo", PL.Hdetrabajo);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -156,5 +158,59 @@ namespace CapaDatos
             return delete;
 
         }
+        public string IniciaSesionMozo(int DNI, int pass)
+        {
+            SqlCommand cmd = null;
+            string nombreMozo = null;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("VerificarMozo", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@DNI", DNI);
+                cmd.Parameters.AddWithValue("@Contraseña", pass);
+                cn.Open();
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    if (reader["Nombre"] != DBNull.Value)
+                    {
+                        nombreMozo = reader["Nombre"].ToString();
+                    }
+                }
+                reader.Close();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                if (cmd != null && cmd.Connection != null)
+                {
+                    cmd.Connection.Close();
+                }
+            }
+            return nombreMozo;
+        }
+
+        public Boolean verificarAdmin (string usuario, string clave)
+        {
+            string u = "ADMIN";
+            string c = "0000";
+            bool v;
+
+            if (usuario != u && clave != c)
+            {
+                v = false;
+            }
+            else
+            {
+                v=true;
+            }
+            return v;
+        }
+
     }
 }

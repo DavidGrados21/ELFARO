@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace CapaLogica
 {
@@ -39,6 +40,14 @@ namespace CapaLogica
         public void EditarMozo(entMozo PL, string nombre)
         {
             datMozo.Instancia.EditarMozo(PL, nombre);
+        }
+        public string IniciarSesionMozo(int DNI, int pass)
+        {
+            return datMozo.Instancia.IniciaSesionMozo(DNI, pass);
+        }
+        public bool IniciarSesionAdmin(string cuenta, string pass)
+        {
+            return datMozo.Instancia.verificarAdmin(cuenta, pass);
         }
     }
 }

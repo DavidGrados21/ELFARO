@@ -78,6 +78,7 @@
             this.btnIS.TabIndex = 4;
             this.btnIS.Text = "Iniciar Sesion";
             this.btnIS.UseVisualStyleBackColor = true;
+            this.btnIS.Click += new System.EventHandler(this.btnIS_Click);
             // 
             // ISAdmin
             // 

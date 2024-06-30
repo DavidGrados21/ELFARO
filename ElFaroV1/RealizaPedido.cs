@@ -18,10 +18,25 @@ namespace CapaLogica
         {
             InitializeComponent();
             logPlatillo.Instancia.MostrarPlatillo(CBPlatillos);
-            //GBPedido.Enabled = false;
+            GBPedido.Enabled = false;
         }
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
+            int dni = int.Parse(txtDNI.Text);
+            int pass = int.Parse(txtPass.Text);
+            if(logMozo.Instancia.IniciarSesionMozo(dni, pass) != null)
+            {
+                string nombre = logMozo.Instancia.IniciarSesionMozo(dni, pass);
+                MessageBox.Show("Bienvenido mozo " + nombre , "Iniciar Sesion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                GBPedido.Enabled = true;
+                GBDatosMozo.Enabled = false;
+            }
+            else
+            {
+                MessageBox.Show("Credenciales incorrectas ", "Iniciar Sesion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtDNI.Clear();
+                txtPass.Clear();
+            }
 
         }
 
