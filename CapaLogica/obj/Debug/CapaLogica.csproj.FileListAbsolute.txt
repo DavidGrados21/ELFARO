@@ -63,3 +63,16 @@ C:\Work_space\MOANSO\Proyecto\ProyectoFinal1\CapaLogica\bin\Debug\CapaEntidad.dl
 C:\Work_space\MOANSO\Proyecto\ProyectoFinal1\CapaLogica\bin\Debug\CapaDatos.pdb
 C:\Work_space\MOANSO\Proyecto\ProyectoFinal1\CapaLogica\bin\Debug\CapaEntidad.pdb
 C:\Work_space\MOANSO\Proyecto\ProyectoFinal1\CapaLogica\obj\Debug\CapaLogica.csproj.CopyComplete
+C:\Work_space\MOANSO\Moanso\CapaLogica\bin\Debug\CapaLogica.dll
+C:\Work_space\MOANSO\Moanso\CapaLogica\bin\Debug\CapaLogica.pdb
+C:\Work_space\MOANSO\Moanso\CapaLogica\bin\Debug\CapaDatos.dll
+C:\Work_space\MOANSO\Moanso\CapaLogica\bin\Debug\CapaEntidad.dll
+C:\Work_space\MOANSO\Moanso\CapaLogica\bin\Debug\CapaDatos.pdb
+C:\Work_space\MOANSO\Moanso\CapaLogica\bin\Debug\CapaEntidad.pdb
+C:\Work_space\MOANSO\Moanso\CapaLogica\obj\Debug\CapaLogica.csproj.AssemblyReference.cache
+C:\Work_space\MOANSO\Moanso\CapaLogica\obj\Debug\CapaLogica.Properties.Resources.resources
+C:\Work_space\MOANSO\Moanso\CapaLogica\obj\Debug\CapaLogica.csproj.GenerateResource.cache
+C:\Work_space\MOANSO\Moanso\CapaLogica\obj\Debug\CapaLogica.csproj.CoreCompileInputs.cache
+C:\Work_space\MOANSO\Moanso\CapaLogica\obj\Debug\CapaLogica.csproj.CopyComplete
+C:\Work_space\MOANSO\Moanso\CapaLogica\obj\Debug\CapaLogica.dll
+C:\Work_space\MOANSO\Moanso\CapaLogica\obj\Debug\CapaLogica.pdb

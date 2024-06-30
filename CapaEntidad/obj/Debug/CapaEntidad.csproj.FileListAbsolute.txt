@@ -28,3 +28,9 @@ C:\Work_space\MOANSO\Proyecto\ProyectoFinal1\CapaEntidad\obj\Debug\CapaEntidad.c
 C:\Work_space\MOANSO\Proyecto\ProyectoFinal1\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
 C:\Work_space\MOANSO\Proyecto\ProyectoFinal1\CapaEntidad\obj\Debug\CapaEntidad.dll
 C:\Work_space\MOANSO\Proyecto\ProyectoFinal1\CapaEntidad\obj\Debug\CapaEntidad.pdb
+C:\Work_space\MOANSO\Moanso\CapaEntidad\bin\Debug\CapaEntidad.dll
+C:\Work_space\MOANSO\Moanso\CapaEntidad\bin\Debug\CapaEntidad.pdb
+C:\Work_space\MOANSO\Moanso\CapaEntidad\obj\Debug\CapaEntidad.csproj.AssemblyReference.cache
+C:\Work_space\MOANSO\Moanso\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
+C:\Work_space\MOANSO\Moanso\CapaEntidad\obj\Debug\CapaEntidad.dll
+C:\Work_space\MOANSO\Moanso\CapaEntidad\obj\Debug\CapaEntidad.pdb
