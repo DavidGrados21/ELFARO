@@ -20,8 +20,8 @@ namespace ElFaroV1
 
         private void btnAdmin_Click(object sender, EventArgs e)
         {
-            MantenedorMozo mozo = new MantenedorMozo();
-            mozo.ShowDialog();
+            ISAdmin admin = new ISAdmin();
+            admin.ShowDialog();
         }
 
         private void btnAlmacen_Click(object sender, EventArgs e)

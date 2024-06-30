@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaLogica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,39 @@ namespace ElFaroV1
 {
     public partial class ISAdmin : Form
     {
+        int intentos = 3;
         public ISAdmin()
         {
             InitializeComponent();
+        }
+
+        private void btnIS_Click(object sender, EventArgs e)
+        {
+            string u = txtUsuario.Text;
+            string c = txtContraseña.Text;
+
+            if (intentos != 0) 
+            {
+                if (logMozo.Instancia.IniciarSesionAdmin(u, c))
+                {
+                    MessageBox.Show("Bienvenido Administrador del Restaurante El Faro ", "Iniciar Sesion", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MantenedorMozo mozo = new MantenedorMozo();
+                    mozo.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Credenciales incorrectas (le quedan " + intentos + " intentos)", "Iniciar Sesion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    intentos--;
+                    txtContraseña.Clear();
+                    txtUsuario.Clear();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Credenciales incorrectas , por favor inicie sesion mas tarde", "Iniciar Sesion", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtContraseña.Clear();
+                txtUsuario.Clear();
+            }
         }
     }
 }

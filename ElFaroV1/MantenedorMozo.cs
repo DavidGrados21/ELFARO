@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlTypes;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -20,10 +21,22 @@ namespace ElFaroV1
 
             MostrarMozos();
         }
+        private void RBefectivo_CheckedChanged(object sender, EventArgs e)
+        {
+            if (RBefectivo.Checked)
+            {
+                GBcuenta.Enabled = false;
+                txtCuenta.Text = "0";
+            }
+            else if (RBtarjeta.Checked)
+            {
+                GBcuenta.Enabled = true;
+                txtCuenta.Clear();
+            }
+        }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            //insertar
             try
             {
                 entMozo p = new entMozo();
@@ -35,6 +48,7 @@ namespace ElFaroV1
                 p.correo = txtCorreo.Text;
                 p.NdeCuenta = int.Parse(txtCuenta.Text);
                 p.pass = int.Parse(txtPass.Text);
+                p.Hdetrabajo =  int.Parse(txtHoras.Text);
                 logMozo.Instancia.InsertarMozo(p);
             }
             catch (Exception ex)
@@ -70,6 +84,7 @@ namespace ElFaroV1
             txtCorreo.Text = filaActual.Cells[5].Value.ToString();
             txtCuenta.Text = filaActual.Cells[6].Value.ToString();
             txtPass.Text = filaActual.Cells[7].Value.ToString();
+            txtHoras.Text = filaActual.Cells[8].Value.ToString();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -86,6 +101,7 @@ namespace ElFaroV1
                 c.correo = txtCorreo.Text;
                 c.NdeCuenta = int.Parse(txtCuenta.Text);
                 c.pass = int.Parse(txtPass.Text);
+                c.Hdetrabajo = int.Parse(txtHoras.Text);
                 logMozo.Instancia.EditarMozo(c, n);
             }
             catch (Exception ex)
@@ -106,6 +122,23 @@ namespace ElFaroV1
             txtCuenta.Clear();
             txtPass.Clear();
             txtNumero.Clear();
+            txtCuenta.Clear();
+            txtHoras.Clear();
+        }
+
+        private void RBContrato_CheckedChanged(object sender, EventArgs e)
+        {
+            if (RBContrato.Checked)
+            {
+                GBhoras.Enabled = false;
+                txtHoras.Text = "0";
+
+            }
+            else if (RBeventual.Checked)
+            {
+                GBhoras.Enabled = true;
+                txtHoras.Clear();
+            }
         }
     }
 }
