@@ -41,7 +41,7 @@ namespace CapaDatos
                     Cli.Nombre = dr["Nombre"].ToString();
                     Cli.NumeroDeDni = Convert.ToInt32(dr["NumeroDeDni"].ToString());
                     Cli.CorreoElectronico = dr["CorreoElectronico"].ToString();
-                    Cli.Telefono = Convert.ToInt32(dr["Telefono"].ToString());
+                    Cli.Telefono = (dr["Telefono"].ToString());
                     lista.Add(Cli);
                 }
 
@@ -143,5 +143,77 @@ namespace CapaDatos
             return delete;
 
         }
+        public string ConsultarCliente(int DNI)
+        {
+            SqlCommand cmd = null;
+            string nombreMozo = null;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("ConsultaCliente", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@NumeroDeDni", DNI);
+                cn.Open();
+
+                SqlDataReader reader = cmd.ExecuteReader();
+                if (reader.Read())
+                {
+                    if (reader["Nombre"] != DBNull.Value)
+                    {
+                        nombreMozo = reader["Nombre"].ToString();
+                    }
+                }
+                reader.Close();
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                if (cmd != null && cmd.Connection != null)
+                {
+                    cmd.Connection.Close();
+                }
+            }
+            return nombreMozo;
+        }
+        public bool VerificarDNI(int DNI)
+        {
+            SqlCommand cmd = null;
+            bool existe = false;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("VerificarDni", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@NumeroDeDni", DNI);
+
+                SqlParameter outputParam = new SqlParameter("@Existe", SqlDbType.Bit)
+                {
+                    Direction = ParameterDirection.Output
+                };
+                cmd.Parameters.Add(outputParam);
+
+                cn.Open();
+                cmd.ExecuteNonQuery();
+
+                existe = (bool)cmd.Parameters["@Existe"].Value;
+            }
+            catch (Exception e)
+            {
+                // Manejo de excepciones
+                throw new Exception("Error al verificar DNI", e);
+            }
+            finally
+            {
+                if (cmd != null && cmd.Connection != null)
+                {
+                    cmd.Connection.Close();
+                }
+            }
+            return existe;
+        }
+
     }
 }

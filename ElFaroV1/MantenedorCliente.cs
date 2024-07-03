@@ -27,7 +27,7 @@ namespace ElFaroV1
                 entCliente p = new entCliente();
                 p.Nombre = txtNombre.Text;
                 p.NumeroDeDni = int.Parse(txtDNI.Text);
-                p.Telefono = int.Parse(txtTelefono.Text);
+                p.Telefono = txtTelefono.Text;
                 p.CorreoElectronico = txtCorreo.Text;
                 logCliente.Instancia.InsertarCliente(p);
             }
@@ -69,7 +69,7 @@ namespace ElFaroV1
                 string n = txtNombre.Text;
                 c.Nombre = txtNombre.Text;
                 c.NumeroDeDni = int.Parse(txtDNI.Text);
-                c.Telefono = int.Parse(txtTelefono.Text);
+                c.Telefono = txtTelefono.Text;
                 c.CorreoElectronico = txtCorreo.Text;
                 logCliente.Instancia.EditarCliente(c, n);
             }

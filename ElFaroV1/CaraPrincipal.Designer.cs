@@ -63,7 +63,7 @@
             // btnCocinero
             // 
             this.btnCocinero.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCocinero.Location = new System.Drawing.Point(318, 82);
+            this.btnCocinero.Location = new System.Drawing.Point(318, 158);
             this.btnCocinero.Name = "btnCocinero";
             this.btnCocinero.Size = new System.Drawing.Size(195, 55);
             this.btnCocinero.TabIndex = 2;
@@ -85,7 +85,7 @@
             // btnAlmacen
             // 
             this.btnAlmacen.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlmacen.Location = new System.Drawing.Point(318, 158);
+            this.btnAlmacen.Location = new System.Drawing.Point(318, 87);
             this.btnAlmacen.Name = "btnAlmacen";
             this.btnAlmacen.Size = new System.Drawing.Size(195, 55);
             this.btnAlmacen.TabIndex = 4;

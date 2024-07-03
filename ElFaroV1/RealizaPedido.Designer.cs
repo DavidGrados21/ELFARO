@@ -29,7 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RealizaPedido));
-            this.GBDatosMozo = new System.Windows.Forms.GroupBox();
+            this.GBDatosCliente = new System.Windows.Forms.GroupBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtDniCliente = new System.Windows.Forms.TextBox();
             this.btnIniciarSesion = new System.Windows.Forms.Button();
             this.txtPass = new System.Windows.Forms.TextBox();
             this.txtDNI = new System.Windows.Forms.TextBox();
@@ -43,30 +47,67 @@
             this.btnImprimir = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.GBDatosMozo.SuspendLayout();
+            this.GBDatosMozo = new System.Windows.Forms.GroupBox();
+            this.GBDatosCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).BeginInit();
             this.GBPedido.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NUDMesa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.GBDatosMozo.SuspendLayout();
             this.SuspendLayout();
             // 
-            // GBDatosMozo
+            // GBDatosCliente
             // 
-            this.GBDatosMozo.Controls.Add(this.btnIniciarSesion);
-            this.GBDatosMozo.Controls.Add(this.txtPass);
-            this.GBDatosMozo.Controls.Add(this.txtDNI);
-            this.GBDatosMozo.Controls.Add(this.label2);
-            this.GBDatosMozo.Controls.Add(this.label1);
-            this.GBDatosMozo.Location = new System.Drawing.Point(12, 12);
-            this.GBDatosMozo.Name = "GBDatosMozo";
-            this.GBDatosMozo.Size = new System.Drawing.Size(186, 166);
-            this.GBDatosMozo.TabIndex = 0;
-            this.GBDatosMozo.TabStop = false;
-            this.GBDatosMozo.Text = "Datos Mozo";
+            this.GBDatosCliente.Controls.Add(this.button2);
+            this.GBDatosCliente.Controls.Add(this.button1);
+            this.GBDatosCliente.Controls.Add(this.label4);
+            this.GBDatosCliente.Controls.Add(this.txtDniCliente);
+            this.GBDatosCliente.Location = new System.Drawing.Point(12, 12);
+            this.GBDatosCliente.Name = "GBDatosCliente";
+            this.GBDatosCliente.Size = new System.Drawing.Size(180, 160);
+            this.GBDatosCliente.TabIndex = 0;
+            this.GBDatosCliente.TabStop = false;
+            this.GBDatosCliente.Text = "Datos Cliente";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(99, 120);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(72, 24);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Buscar";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(6, 120);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(72, 24);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Registrar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(17, 42);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(141, 13);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Introduzca el DNI del cliente";
+            // 
+            // txtDniCliente
+            // 
+            this.txtDniCliente.Location = new System.Drawing.Point(20, 61);
+            this.txtDniCliente.Name = "txtDniCliente";
+            this.txtDniCliente.Size = new System.Drawing.Size(138, 20);
+            this.txtDniCliente.TabIndex = 0;
             // 
             // btnIniciarSesion
             // 
-            this.btnIniciarSesion.Location = new System.Drawing.Point(45, 137);
+            this.btnIniciarSesion.Location = new System.Drawing.Point(43, 137);
             this.btnIniciarSesion.Name = "btnIniciarSesion";
             this.btnIniciarSesion.Size = new System.Drawing.Size(89, 23);
             this.btnIniciarSesion.TabIndex = 4;
@@ -76,14 +117,14 @@
             // 
             // txtPass
             // 
-            this.txtPass.Location = new System.Drawing.Point(6, 107);
+            this.txtPass.Location = new System.Drawing.Point(6, 101);
             this.txtPass.Name = "txtPass";
             this.txtPass.Size = new System.Drawing.Size(156, 20);
             this.txtPass.TabIndex = 3;
             // 
             // txtDNI
             // 
-            this.txtDNI.Location = new System.Drawing.Point(6, 47);
+            this.txtDNI.Location = new System.Drawing.Point(6, 42);
             this.txtDNI.Name = "txtDNI";
             this.txtDNI.Size = new System.Drawing.Size(156, 20);
             this.txtDNI.TabIndex = 2;
@@ -91,7 +132,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 80);
+            this.label2.Location = new System.Drawing.Point(3, 85);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(61, 13);
             this.label2.TabIndex = 1;
@@ -100,7 +141,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(3, 19);
+            this.label1.Location = new System.Drawing.Point(3, 26);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 13);
             this.label1.TabIndex = 0;
@@ -184,31 +225,48 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
+            // GBDatosMozo
+            // 
+            this.GBDatosMozo.Controls.Add(this.btnIniciarSesion);
+            this.GBDatosMozo.Controls.Add(this.txtPass);
+            this.GBDatosMozo.Controls.Add(this.txtDNI);
+            this.GBDatosMozo.Controls.Add(this.label2);
+            this.GBDatosMozo.Controls.Add(this.label1);
+            this.GBDatosMozo.Location = new System.Drawing.Point(12, 12);
+            this.GBDatosMozo.Name = "GBDatosMozo";
+            this.GBDatosMozo.Size = new System.Drawing.Size(186, 166);
+            this.GBDatosMozo.TabIndex = 5;
+            this.GBDatosMozo.TabStop = false;
+            this.GBDatosMozo.Text = "Datos Mozo";
+            // 
             // RealizaPedido
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(770, 337);
+            this.ClientSize = new System.Drawing.Size(765, 337);
+            this.Controls.Add(this.GBDatosCliente);
+            this.Controls.Add(this.GBDatosMozo);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.GBPedido);
-            this.Controls.Add(this.GBDatosMozo);
             this.Name = "RealizaPedido";
             this.Text = "RealizaPedido";
             this.Load += new System.EventHandler(this.RealizaPedido_Load);
-            this.GBDatosMozo.ResumeLayout(false);
-            this.GBDatosMozo.PerformLayout();
+            this.GBDatosCliente.ResumeLayout(false);
+            this.GBDatosCliente.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).EndInit();
             this.GBPedido.ResumeLayout(false);
             this.GBPedido.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NUDMesa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.GBDatosMozo.ResumeLayout(false);
+            this.GBDatosMozo.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.GroupBox GBDatosMozo;
+        private System.Windows.Forms.GroupBox GBDatosCliente;
         private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.TextBox txtDNI;
         private System.Windows.Forms.Label label2;
@@ -222,5 +280,10 @@
         private System.Windows.Forms.Button btnImprimir;
         private System.Windows.Forms.NumericUpDown NUDMesa;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.GroupBox GBDatosMozo;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtDniCliente;
     }
 }

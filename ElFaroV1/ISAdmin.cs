@@ -17,6 +17,7 @@ namespace ElFaroV1
         public ISAdmin()
         {
             InitializeComponent();
+            txtContraseña.PasswordChar ='*';
         }
 
         private void btnIS_Click(object sender, EventArgs e)
@@ -31,6 +32,8 @@ namespace ElFaroV1
                     MessageBox.Show("Bienvenido Administrador del Restaurante El Faro ", "Iniciar Sesion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     MantenedorMozo mozo = new MantenedorMozo();
                     mozo.ShowDialog();
+                    txtContraseña.Clear();
+                    txtUsuario.Clear();
                 }
                 else
                 {
@@ -45,6 +48,19 @@ namespace ElFaroV1
                 MessageBox.Show("Credenciales incorrectas , por favor inicie sesion mas tarde", "Iniciar Sesion", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtContraseña.Clear();
                 txtUsuario.Clear();
+            }
+        }
+
+        private void txtContraseña_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtContraseña_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnIS.PerformClick();
             }
         }
     }
