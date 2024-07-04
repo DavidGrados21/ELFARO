@@ -34,3 +34,9 @@ C:\Users\thali\OneDrive\Escritorio\VesionFinal\CapaEntidad\obj\Debug\CapaEntidad
 C:\Users\thali\OneDrive\Escritorio\VesionFinal\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
 C:\Users\thali\OneDrive\Escritorio\VesionFinal\CapaEntidad\obj\Debug\CapaEntidad.dll
 C:\Users\thali\OneDrive\Escritorio\VesionFinal\CapaEntidad\obj\Debug\CapaEntidad.pdb
+C:\Users\David\source\repos\Elfaro V2\CapaEntidad\bin\Debug\CapaEntidad.dll
+C:\Users\David\source\repos\Elfaro V2\CapaEntidad\bin\Debug\CapaEntidad.pdb
+C:\Users\David\source\repos\Elfaro V2\CapaEntidad\obj\Debug\CapaEntidad.csproj.AssemblyReference.cache
+C:\Users\David\source\repos\Elfaro V2\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
+C:\Users\David\source\repos\Elfaro V2\CapaEntidad\obj\Debug\CapaEntidad.dll
+C:\Users\David\source\repos\Elfaro V2\CapaEntidad\obj\Debug\CapaEntidad.pdb
