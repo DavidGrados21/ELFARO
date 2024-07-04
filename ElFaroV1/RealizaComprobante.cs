@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace ElFaroV1
 {
-    public partial class MantenedorFormaDePago : Form
+    public partial class RealizaComprobante : Form
     {
-        public MantenedorFormaDePago()
+        public RealizaComprobante()
         {
             InitializeComponent();
         }

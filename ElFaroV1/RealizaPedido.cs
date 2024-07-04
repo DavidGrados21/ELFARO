@@ -69,7 +69,7 @@ namespace CapaLogica
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
-            MantenedorFormaDePago FDP = new MantenedorFormaDePago();
+            RealizaComprobante FDP = new RealizaComprobante();
             FDP.Show();
         }
         public void MostrarPedido()

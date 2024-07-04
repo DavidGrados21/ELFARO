@@ -46,6 +46,14 @@ namespace ElFaroV1
                 txtContraseña.Clear();
                 txtUsuario.Clear();
             }
+
+        }
+        private void txtContraseña_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnIS.PerformClick();
+            }
         }
     }
 }

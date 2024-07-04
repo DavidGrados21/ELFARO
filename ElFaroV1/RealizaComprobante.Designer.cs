@@ -1,6 +1,6 @@
 ﻿namespace ElFaroV1
 {
-    partial class MantenedorFormaDePago
+    partial class RealizaComprobante
     {
         /// <summary>
         /// Required designer variable.
