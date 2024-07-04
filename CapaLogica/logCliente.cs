@@ -40,5 +40,13 @@ namespace CapaLogica
         {
             datCliente.Instancia.EditarCliente(PL, nombre);
         }
+        public string ConsultaCliente(int DNI)
+        {
+            return datCliente.Instancia.ConsultarCliente(DNI);
+        }
+        public bool VerificarDNI(int DNI)
+        {
+            return datCliente.Instancia.VerificarDNI(DNI);
+        }
     }
 }

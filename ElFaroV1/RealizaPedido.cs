@@ -49,10 +49,10 @@ namespace CapaLogica
 
             try
             {
-                entPlatillo p = new entPlatillo();
-                p.NombrePlatillo = name;
-                p.Precio = precio;
-                logPedido.Instancia.InsertarPedido(p,c);
+                //entPlatillo p = new entPlatillo();
+                //p.NombrePlatillo = name;
+                //p.Precio = precio;
+                //logPedido.Instancia.InsertarPedido(p);
             }
             catch (Exception ex)
             {
