@@ -8,9 +8,9 @@ namespace CapaEntidad
 {
     public class entCliente
     {
-        public string @Nombre { get; set; }
-        public int @NumeroDeDni { get; set; }
-        public string @CorreoElectronico { get; set; }
-        public int @Telefono { get; set; }
+        public string Nombre { get; set; }
+        public int NumeroDeDni { get; set; }
+        public string CorreoElectronico { get; set; }
+        public int Telefono { get; set; }
     }
 }

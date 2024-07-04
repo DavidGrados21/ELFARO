@@ -45,7 +45,7 @@ namespace ElFaroV1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MantenedorFormaDePago FDP = new MantenedorFormaDePago();
+            RealizaComprobante FDP = new RealizaComprobante();
             FDP.Show();
         }
 

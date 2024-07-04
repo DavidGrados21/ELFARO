@@ -82,11 +82,11 @@
     <Compile Include="Mantenedores.Designer.cs">
       <DependentUpon>Mantenedores.cs</DependentUpon>
     </Compile>
-    <Compile Include="MantenedorFormaDePago.cs">
+    <Compile Include="RealizaComprobante.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MantenedorFormaDePago.Designer.cs">
-      <DependentUpon>MantenedorFormaDePago.cs</DependentUpon>
+    <Compile Include="RealizaComprobante.Designer.cs">
+      <DependentUpon>RealizaComprobante.cs</DependentUpon>
     </Compile>
     <Compile Include="MantenedorInsumos.cs">
       <SubType>Form</SubType>
@@ -156,8 +156,8 @@
     <EmbeddedResource Include="Mantenedores.resx">
       <DependentUpon>Mantenedores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MantenedorFormaDePago.resx">
-      <DependentUpon>MantenedorFormaDePago.cs</DependentUpon>
+    <EmbeddedResource Include="RealizaComprobante.resx">
+      <DependentUpon>RealizaComprobante.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MantenedorMozo.resx">
       <DependentUpon>MantenedorMozo.cs</DependentUpon>
