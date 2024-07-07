@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Almacen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Almacen.Designer.cs">
+      <DependentUpon>Almacen.cs</DependentUpon>
+    </Compile>
     <Compile Include="CaraPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,12 @@
     </Compile>
     <Compile Include="Mantenedores.Designer.cs">
       <DependentUpon>Mantenedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="nostasIngreso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="nostasIngreso.Designer.cs">
+      <DependentUpon>nostasIngreso.cs</DependentUpon>
     </Compile>
     <Compile Include="RealizaComprobante.cs">
       <SubType>Form</SubType>
@@ -118,6 +130,12 @@
     <Compile Include="MMCocina.Designer.cs">
       <DependentUpon>MMCocina.cs</DependentUpon>
     </Compile>
+    <Compile Include="RealizanotaIngreso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RealizanotaIngreso.Designer.cs">
+      <DependentUpon>RealizanotaIngreso.cs</DependentUpon>
+    </Compile>
     <Compile Include="RealizaPedido.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +156,9 @@
     <Compile Include="RealizarOrdenCompra.Designer.cs">
       <DependentUpon>RealizarOrdenCompra.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Almacen.resx">
+      <DependentUpon>Almacen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CaraPrincipal.resx">
       <DependentUpon>CaraPrincipal.cs</DependentUpon>
     </EmbeddedResource>
@@ -156,6 +177,9 @@
     <EmbeddedResource Include="Mantenedores.resx">
       <DependentUpon>Mantenedores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="nostasIngreso.resx">
+      <DependentUpon>nostasIngreso.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RealizaComprobante.resx">
       <DependentUpon>RealizaComprobante.cs</DependentUpon>
     </EmbeddedResource>
@@ -173,6 +197,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MMCocina.resx">
       <DependentUpon>MMCocina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RealizanotaIngreso.resx">
+      <DependentUpon>RealizanotaIngreso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RealizaPedido.resx">
       <DependentUpon>RealizaPedido.cs</DependentUpon>

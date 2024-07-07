@@ -42,6 +42,15 @@ namespace CapaLogica
             datProveedor.Instancia.DeshabilitarProveedor(Prov);
         }
 
+        public entProveedor BuscarProveedorId(int idProveedor)
+        {
+            try
+            {
+                return datProveedor.Instancia.BuscarProveedorId(idProveedor);
+            }
+            catch (Exception e) { throw e; }
+        }
+
 
     }
 }

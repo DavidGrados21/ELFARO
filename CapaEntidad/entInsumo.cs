@@ -8,6 +8,7 @@ namespace CapaEntidad
 {
     public class entInsumo
     {
+        public int idInsumo {  get; set; }
         public string NombreInsumos { get; set; }
         public double Cantidad { get; set; }
         public string UM { get; set; }

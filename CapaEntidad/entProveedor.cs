@@ -14,5 +14,10 @@ namespace CapaEntidad
         public string Rubro { get; set; }
         public string Direccion { get; set; }
         public int Telefono { get; set; }
+
+        public override string ToString()
+        {
+            return RazonSocial;
+        }
     }
 }

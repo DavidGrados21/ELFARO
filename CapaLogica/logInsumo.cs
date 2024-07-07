@@ -44,5 +44,14 @@ namespace CapaLogica
         {
             datInsumos.Instancia.EditarInsumos(PL, nombre);
         }
+
+        public entInsumo BuscarInsumosId(int idInsumo)
+        {
+            try
+            {
+                return datInsumos.Instancia.BuscarInsumoId(idInsumo);
+            }
+            catch (Exception e) { throw e; }
+        }
     }
 }

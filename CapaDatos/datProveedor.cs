@@ -9,7 +9,7 @@ using CapaEntidad;
 
 namespace CapaDatos
 {
-   public class datProveedor
+    public class datProveedor
     {
 
 
@@ -27,7 +27,7 @@ namespace CapaDatos
         }
         #endregion singleton
 
-        ////////////////////listado de Clientes
+        
         public List<entProveedor> ListarProveedor()
         {
             SqlCommand cmd = null;
@@ -35,8 +35,8 @@ namespace CapaDatos
             try
             {
 
-                SqlConnection cn = Conexion.Instancia.Conectar(); //singleton
-                cmd = new SqlCommand("spListarProveedor", cn);
+                SqlConnection cn = Conexion.Instancia.Conectar(); 
+                cmd = new SqlCommand("ListarProveedores", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
@@ -100,7 +100,6 @@ namespace CapaDatos
             return inserta;
         }
 
-        //////////////////////////////////EditaCliente
         public Boolean EditarProveedor(entProveedor Prov)
         {
             SqlCommand cmd = null;
@@ -157,9 +156,39 @@ namespace CapaDatos
             return delete;
         }
 
+        public entProveedor BuscarProveedorId(int idProveedor)
+        {
+            SqlCommand cmd = null;
+            entProveedor Prov = new entProveedor();
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("spBuscaridProveedor", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@prmintidProveedor", idProveedor);
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                while (dr.Read())
+                {
+                    Prov.Codigo = Convert.ToInt16(dr["Codigo"]);
+                    Prov.RazonSocial = dr["RazonSocial"].ToString();
+                    Prov.Ruc = Convert.ToInt32(dr["Ruc"].ToString());
+                    Prov.Rubro = dr["Rubro"].ToString();
+                    Prov.Direccion = dr["Direccion"].ToString();
+                    Prov.Telefono = Convert.ToInt32(dr["Telefono"].ToString());
+                }
+            }
+            catch (Exception e)
+            {
+
+                throw e;
+            }
+            finally { cmd.Connection.Close(); }
+            return Prov;
+
+        }
+
     }
-
-
 
 }
 

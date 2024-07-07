@@ -235,7 +235,7 @@
             this.dgvProveedor.GridColor = System.Drawing.SystemColors.ActiveCaption;
             this.dgvProveedor.Location = new System.Drawing.Point(-37, 176);
             this.dgvProveedor.Name = "dgvProveedor";
-            this.dgvProveedor.Size = new System.Drawing.Size(601, 182);
+            this.dgvProveedor.Size = new System.Drawing.Size(623, 182);
             this.dgvProveedor.TabIndex = 20;
             this.dgvProveedor.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProveedor_CellClick);
             // 
