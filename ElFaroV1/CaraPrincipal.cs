@@ -26,8 +26,8 @@ namespace ElFaroV1
 
         private void btnAlmacen_Click(object sender, EventArgs e)
         {
-            MantenedorInsumos Alma= new MantenedorInsumos();
-            Alma.ShowDialog();
+            Almacen almacen = new Almacen();
+            almacen.ShowDialog();
         }
 
         private void btnPedidos_Click(object sender, EventArgs e)
