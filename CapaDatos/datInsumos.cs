@@ -24,8 +24,6 @@ namespace CapaDatos
             }
         }
         #endregion singleton
-
-        
         public List<entInsumo> ListarInsumos()
         {
             SqlCommand cmd = null;
@@ -33,16 +31,15 @@ namespace CapaDatos
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar(); //singleton
-                cmd = new SqlCommand("ListarInsumos", cn);
+                cmd = new SqlCommand("spListarInsumo", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
                     entInsumo insumo = new entInsumo();
-                    insumo.idInsumo = Convert.ToInt32(dr["idInsumo"].ToString());
+                    insumo.idInsumo = Convert.ToInt32(dr["IdInsumo"].ToString());
                     insumo.NombreInsumos = dr["NombreInsumo"].ToString();
-                    insumo.Cantidad = Convert.ToDouble(dr["Cantidad"]);
                     insumo.UM = dr["UnidadMedida"].ToString();
                     lista.Add(insumo);
                 }
@@ -72,7 +69,6 @@ namespace CapaDatos
                 cmd = new SqlCommand("spInsertaInsumo", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@NombreInsumo", Cli.NombreInsumos);
-                cmd.Parameters.AddWithValue("@CantidadInsumo", Cli.Cantidad);
                 cmd.Parameters.AddWithValue("@UnidadMedida", Cli.UM);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
@@ -119,34 +115,6 @@ namespace CapaDatos
             return delete;
 
         }
-        public Boolean EditarInsumos(entInsumo Cli, string nombre)
-        {
-            SqlCommand cmd = null;
-            Boolean edita = false;
-            try
-            {
-                SqlConnection cn = Conexion.Instancia.Conectar();
-                cmd = new SqlCommand("spEditaInsumo", cn);
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@NombreInsumo", Cli.NombreInsumos);
-                cmd.Parameters.AddWithValue("@NuevoNombreInsumo", nombre);
-                cmd.Parameters.AddWithValue("@CantidadInsumo ", Cli.Cantidad);
-                cmd.Parameters.AddWithValue("@unidadMedida ", Cli.UM);
-
-                cn.Open();
-                int i = cmd.ExecuteNonQuery();
-                if (i > 0)
-                {
-                    edita = true;
-                }
-            }
-            catch (Exception e)
-            {
-                throw e;
-            }
-            finally { cmd.Connection.Close(); }
-            return edita;
-        }
 
 
         public entInsumo BuscarInsumoId(int idInsumo)
@@ -158,14 +126,13 @@ namespace CapaDatos
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("spBuscaridInsumo", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@prmintidInsumo", idInsumo);
+                cmd.Parameters.AddWithValue("@IdInsumo", idInsumo);
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
                 while (dr.Read())
                 {
                     ins.idInsumo = Convert.ToInt32(dr["IdInsumo"].ToString());
                     ins.NombreInsumos = dr["NombreInsumo"].ToString();
-                    ins.Cantidad = Convert.ToDouble(dr["Cantidad"]);
                     ins.UM = dr["UnidadMedida"].ToString();
                 }
             }
