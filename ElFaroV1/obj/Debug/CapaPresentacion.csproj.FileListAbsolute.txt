@@ -232,3 +232,36 @@ C:\Work_space\MOANSO\PROYECTOFINAL1\ElFaroV1\obj\Debug\ElFaroV1.pdb
 C:\Work_space\MOANSO\PROYECTOFINAL1\ElFaroV1\obj\Debug\ElFaroV1.nostasIngreso.resources
 C:\Work_space\MOANSO\PROYECTOFINAL1\ElFaroV1\obj\Debug\ElFaroV1.RealizanotaIngreso.resources
 C:\Work_space\MOANSO\PROYECTOFINAL1\ElFaroV1\obj\Debug\ElFaroV1.Almacen.resources
+C:\Users\David\source\repos\V2 El Faro\ElFaroV1\bin\Debug\ElFaroV1.exe.config
+C:\Users\David\source\repos\V2 El Faro\ElFaroV1\bin\Debug\ElFaroV1.exe
+C:\Users\David\source\repos\V2 El Faro\ElFaroV1\bin\Debug\ElFaroV1.pdb
+C:\Users\David\source\repos\V2 El Faro\ElFaroV1\bin\Debug\CapaEntidad.dll
+C:\Users\David\source\repos\V2 El Faro\ElFaroV1\bin\Debug\CapaLogica.dll
+C:\Users\David\source\repos\V2 El Faro\ElFaroV1\bin\Debug\CapaDatos.dll
+C:\Users\David\source\repos\V2 El Faro\ElFaroV1\bin\Debug\CapaEntidad.pdb
+C:\Users\David\source\repos\V2 El Faro\ElFaroV1\bin\Debug\CapaLogica.pdb
+C:\Users\David\source\repos\V2 El Faro\ElFaroV1\bin\Debug\CapaDatos.pdb
+C:\Users\David\source\repos\V2 El Faro\ElFaroV1\obj\Debug\CapaPresentacion.csproj.AssemblyReference.cache
+C:\Users\David\source\repos\V2 El Faro\ElFaroV1\obj\Debug\ElFaroV1.CaraPrincipal.resources
+C:\Users\David\source\repos\V2 El Faro\ElFaroV1\obj\Debug\ElFaroV1.ConsultaPedido.resources
+C:\Users\David\source\repos\V2 El Faro\ElFaroV1\obj\Debug\ElFaroV1.ConsultaPlatillo.resources
+C:\Users\David\source\repos\V2 El Faro\ElFaroV1\obj\Debug\ElFaroV1.MantenedorCliente.resources
+C:\Users\David\source\repos\V2 El Faro\ElFaroV1\obj\Debug\ElFaroV1.Mantenedores.resources
+C:\Users\David\source\repos\V2 El Faro\ElFaroV1\obj\Debug\ElFaroV1.MMAlmacen.resources
+C:\Users\David\source\repos\V2 El Faro\ElFaroV1\obj\Debug\ElFaroV1.nostasIngreso.resources
+C:\Users\David\source\repos\V2 El Faro\ElFaroV1\obj\Debug\ElFaroV1.RealizaComprobante.resources
+C:\Users\David\source\repos\V2 El Faro\ElFaroV1\obj\Debug\ElFaroV1.MantenedorMozo.resources
+C:\Users\David\source\repos\V2 El Faro\ElFaroV1\obj\Debug\ElFaroV1.MantenedorPlatillo.resources
+C:\Users\David\source\repos\V2 El Faro\ElFaroV1\obj\Debug\ElFaroV1.MantenedorInsumos.resources
+C:\Users\David\source\repos\V2 El Faro\ElFaroV1\obj\Debug\ElFaroV1.MantenedorProveedor.resources
+C:\Users\David\source\repos\V2 El Faro\ElFaroV1\obj\Debug\ElFaroV1.MMCocina.resources
+C:\Users\David\source\repos\V2 El Faro\ElFaroV1\obj\Debug\ElFaroV1.RealizanotaIngreso.resources
+C:\Users\David\source\repos\V2 El Faro\ElFaroV1\obj\Debug\CapaLogica.RealizaPedido.resources
+C:\Users\David\source\repos\V2 El Faro\ElFaroV1\obj\Debug\ElFaroV1.ISAdmin.resources
+C:\Users\David\source\repos\V2 El Faro\ElFaroV1\obj\Debug\ElFaroV1.Properties.Resources.resources
+C:\Users\David\source\repos\V2 El Faro\ElFaroV1\obj\Debug\ElFaroV1.RealizarOrdenCompra.resources
+C:\Users\David\source\repos\V2 El Faro\ElFaroV1\obj\Debug\CapaPresentacion.csproj.GenerateResource.cache
+C:\Users\David\source\repos\V2 El Faro\ElFaroV1\obj\Debug\CapaPresentacion.csproj.CoreCompileInputs.cache
+C:\Users\David\source\repos\V2 El Faro\ElFaroV1\obj\Debug\CapaPresentacion.csproj.CopyComplete
+C:\Users\David\source\repos\V2 El Faro\ElFaroV1\obj\Debug\ElFaroV1.exe
+C:\Users\David\source\repos\V2 El Faro\ElFaroV1\obj\Debug\ElFaroV1.pdb

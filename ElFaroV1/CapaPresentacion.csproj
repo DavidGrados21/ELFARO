@@ -46,23 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Almacen.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Almacen.Designer.cs">
-      <DependentUpon>Almacen.cs</DependentUpon>
-    </Compile>
     <Compile Include="CaraPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CaraPrincipal.Designer.cs">
       <DependentUpon>CaraPrincipal.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ConsultaIStock.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ConsultaIStock.Designer.cs">
-      <DependentUpon>ConsultaIStock.cs</DependentUpon>
     </Compile>
     <Compile Include="ConsultaPedido.cs">
       <SubType>Form</SubType>
@@ -87,6 +75,12 @@
     </Compile>
     <Compile Include="Mantenedores.Designer.cs">
       <DependentUpon>Mantenedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MMAlmacen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MMAlmacen.Designer.cs">
+      <DependentUpon>MMAlmacen.cs</DependentUpon>
     </Compile>
     <Compile Include="nostasIngreso.cs">
       <SubType>Form</SubType>
@@ -156,14 +150,8 @@
     <Compile Include="RealizarOrdenCompra.Designer.cs">
       <DependentUpon>RealizarOrdenCompra.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Almacen.resx">
-      <DependentUpon>Almacen.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="CaraPrincipal.resx">
       <DependentUpon>CaraPrincipal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ConsultaIStock.resx">
-      <DependentUpon>ConsultaIStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultaPedido.resx">
       <DependentUpon>ConsultaPedido.cs</DependentUpon>
@@ -176,6 +164,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenedores.resx">
       <DependentUpon>Mantenedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMAlmacen.resx">
+      <DependentUpon>MMAlmacen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="nostasIngreso.resx">
       <DependentUpon>nostasIngreso.cs</DependentUpon>

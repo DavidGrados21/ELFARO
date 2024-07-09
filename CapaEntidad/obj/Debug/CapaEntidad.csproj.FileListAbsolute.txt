@@ -46,3 +46,9 @@ C:\Work_space\MOANSO\PROYECTOFINAL1\CapaEntidad\obj\Debug\CapaEntidad.csproj.Ass
 C:\Work_space\MOANSO\PROYECTOFINAL1\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
 C:\Work_space\MOANSO\PROYECTOFINAL1\CapaEntidad\obj\Debug\CapaEntidad.dll
 C:\Work_space\MOANSO\PROYECTOFINAL1\CapaEntidad\obj\Debug\CapaEntidad.pdb
+C:\Users\David\source\repos\V2 El Faro\CapaEntidad\bin\Debug\CapaEntidad.dll
+C:\Users\David\source\repos\V2 El Faro\CapaEntidad\bin\Debug\CapaEntidad.pdb
+C:\Users\David\source\repos\V2 El Faro\CapaEntidad\obj\Debug\CapaEntidad.csproj.AssemblyReference.cache
+C:\Users\David\source\repos\V2 El Faro\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
+C:\Users\David\source\repos\V2 El Faro\CapaEntidad\obj\Debug\CapaEntidad.dll
+C:\Users\David\source\repos\V2 El Faro\CapaEntidad\obj\Debug\CapaEntidad.pdb

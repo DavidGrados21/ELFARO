@@ -26,7 +26,7 @@ namespace ElFaroV1
 
         private void btnAlmacen_Click(object sender, EventArgs e)
         {
-            Almacen almacen = new Almacen();
+            MMAlmacen almacen = new MMAlmacen();
             almacen.ShowDialog();
         }
 

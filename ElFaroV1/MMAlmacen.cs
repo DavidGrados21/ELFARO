@@ -10,20 +10,20 @@ using System.Windows.Forms;
 
 namespace ElFaroV1
 {
-    public partial class Almacen : Form
+    public partial class MMAlmacen : Form
     {
-        public Almacen()
+        public MMAlmacen()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnCrearInsumos_Click(object sender, EventArgs e)
         {
             MantenedorInsumos Alma = new MantenedorInsumos();
             Alma.ShowDialog();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void btnCrearNdeIngreso_Click(object sender, EventArgs e)
         {
             RealizanotaIngreso realizanota = new RealizanotaIngreso();
             realizanota.ShowDialog();
