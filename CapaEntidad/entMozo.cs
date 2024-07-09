@@ -14,7 +14,7 @@ namespace CapaEntidad
         public string direccion { get; set; }
         public int telefono { get; set; }
         public string correo { get; set; }
-        public int NdeCuenta { get; set; }
+        public string NdeCuenta { get; set; }
         public int pass { get; set; }
         public decimal Hdetrabajo { get; set; }
     }

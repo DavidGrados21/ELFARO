@@ -10,14 +10,10 @@ namespace CapaEntidad
     {
         public int Codigo { get; set; }
         public string RazonSocial { get; set; }
-        public int Ruc { get; set; }
+        public string Ruc { get; set; }
         public string Rubro { get; set; }
         public string Direccion { get; set; }
         public int Telefono { get; set; }
-
-        public override string ToString()
-        {
-            return RazonSocial;
-        }
+        public bool estado { get; set; }
     }
 }
