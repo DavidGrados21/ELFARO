@@ -24,6 +24,7 @@ namespace CapaDatos
             }
         }
         #endregion singleton
+
         public List<entCliente> ListarCliente()
         {
             SqlCommand cmd = null;
@@ -38,10 +39,10 @@ namespace CapaDatos
                 while (dr.Read())
                 {
                     entCliente Cli = new entCliente();
-                    Cli.Nombre = dr["Nombre"].ToString();
-                    Cli.NumeroDeDni = Convert.ToInt32(dr["NumeroDeDni"].ToString());
-                    Cli.CorreoElectronico = dr["CorreoElectronico"].ToString();
-                    Cli.Telefono = Convert.ToInt32(dr["Telefono"].ToString());
+                    Cli.NumeroDeDni = Convert.ToInt32(dr["DocumentoCliente"].ToString());
+                    Cli.Nombre = dr["NombreCliente"].ToString();
+                    Cli.CorreoElectronico = dr["CorreoElectronicoCliente"].ToString();
+                    Cli.Telefono = Convert.ToInt32(dr["TelefonoCliente"].ToString());
                     lista.Add(Cli);
                 }
 
@@ -65,10 +66,10 @@ namespace CapaDatos
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("spInsertaCliente", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Nombre", CL.Nombre);
-                cmd.Parameters.AddWithValue("@NumeroDeDni", CL.NumeroDeDni);
-                cmd.Parameters.AddWithValue("@CorreoElectronico", CL.CorreoElectronico);
-                cmd.Parameters.AddWithValue("@Telefono", CL.Telefono);
+                cmd.Parameters.AddWithValue("@DocumentoCliente", CL.NumeroDeDni);
+                cmd.Parameters.AddWithValue("@NombreCliente", CL.Nombre);
+                cmd.Parameters.AddWithValue("@CorreoElectronicoCliente", CL.CorreoElectronico);
+                cmd.Parameters.AddWithValue("@TelefonoCliente", CL.Telefono);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -99,10 +100,10 @@ namespace CapaDatos
                 cmd = new SqlCommand("spEditaCliente", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@NuevoNombre", nombre);
-                cmd.Parameters.AddWithValue("@Nombre", CL.Nombre);
-                cmd.Parameters.AddWithValue("@NumeroDeDni", CL.NumeroDeDni);
-                cmd.Parameters.AddWithValue("@CorreoElectronico", CL.CorreoElectronico);
-                cmd.Parameters.AddWithValue("@Telefono", CL.Telefono);
+                cmd.Parameters.AddWithValue("@DocumentoCliente", CL.NumeroDeDni);
+                cmd.Parameters.AddWithValue("@NombreCliente", CL.Nombre);
+                cmd.Parameters.AddWithValue("@CorreoElectronicoCliente", CL.CorreoElectronico);
+                cmd.Parameters.AddWithValue("@TelefonoCliente", CL.Telefono);
 
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
@@ -127,7 +128,7 @@ namespace CapaDatos
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("spEliminacliente", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Nombre", nombreCliente);
+                cmd.Parameters.AddWithValue("@NombreCliente", nombreCliente);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -152,15 +153,15 @@ namespace CapaDatos
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("ConsultaCliente", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@NumeroDeDni", DNI);
+                cmd.Parameters.AddWithValue("@DocumentoCliente", DNI);
                 cn.Open();
 
                 SqlDataReader reader = cmd.ExecuteReader();
                 if (reader.Read())
                 {
-                    if (reader["Nombre"] != DBNull.Value)
+                    if (reader["NombreCliente"] != DBNull.Value)
                     {
-                        nombreMozo = reader["Nombre"].ToString();
+                        nombreMozo = reader["NombreCliente"].ToString();
                     }
                 }
                 reader.Close();
@@ -187,7 +188,7 @@ namespace CapaDatos
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("VerificarDni", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@NumeroDeDni", DNI);
+                cmd.Parameters.AddWithValue("@DocumentoCliente", DNI);
 
                 SqlParameter outputParam = new SqlParameter("@Existe", SqlDbType.Bit)
                 {

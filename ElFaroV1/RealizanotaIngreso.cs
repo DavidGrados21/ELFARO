@@ -21,25 +21,27 @@ namespace ElFaroV1
         }
         public void ListarNotaingreso()
         {
-            List<entNotaIngreso> listaNotaIngreso = logNotaIngreso.Instancia.ListarNotaIngreso();
-
-            if (listaNotaIngreso.Count >= 0)
-            {
-                tablaNotaIngreso.Columns.Clear(); 
-                
-                tablaNotaIngreso.DataSource = listaNotaIngreso; 
-
-            }
+            tablaNotaIngreso.DataSource = logNotaIngreso.Instancia.ListarNotaIngreso();
         }
         private void RealizanotaIngreso_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void btnNuevo_Click(object sender, EventArgs e)
+        private void btnNuevo_Click_1(object sender, EventArgs e)
         {
             nostasIngreso not = new nostasIngreso();
             not.Show();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ListarNotaingreso();
         }
     }
 }

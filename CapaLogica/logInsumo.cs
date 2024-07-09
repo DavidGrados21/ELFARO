@@ -24,7 +24,6 @@ namespace CapaLogica
         }
         #endregion singleton
 
-        ///listado
         public List<entInsumo> ListarInsumosCL()
         {
             return datInsumos.Instancia.ListarInsumos();
@@ -40,18 +39,11 @@ namespace CapaLogica
         {
             datInsumos.Instancia.EliminarInsumo(Cli);
         }
-        public void EditarInsumo(entInsumo PL, string nombre)
-        {
-            datInsumos.Instancia.EditarInsumos(PL, nombre);
-        }
+
 
         public entInsumo BuscarInsumosId(int idInsumo)
         {
-            try
-            {
-                return datInsumos.Instancia.BuscarInsumoId(idInsumo);
-            }
-            catch (Exception e) { throw e; }
+            return datInsumos.Instancia.BuscarInsumoId(idInsumo);
         }
     }
 }

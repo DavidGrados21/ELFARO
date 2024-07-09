@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaLogica;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,11 +16,23 @@ namespace ElFaroV1
         public ConsultaPlatillo()
         {
             InitializeComponent();
+            MostrarPlatillo();
+        }
+
+        public void MostrarPlatillo()
+        {
+            DGPlatillo.DataSource = logPlatillo.Instancia.ListarPlatillo();
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            string nombre = txtNombre.Text;
+            DGPlatillo.DataSource = logPlatillo.Instancia.BusquedadPlatillo(nombre);
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
         {
-
+            MostrarPlatillo();
         }
     }
 }

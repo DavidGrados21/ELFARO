@@ -17,6 +17,7 @@ namespace ElFaroV1
         public ISAdmin()
         {
             InitializeComponent();
+            txtContraseña.PasswordChar = '*';
         }
 
         private void btnIS_Click(object sender, EventArgs e)

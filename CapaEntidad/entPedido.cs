@@ -8,7 +8,8 @@ namespace CapaEntidad
 {
     public class entPedido
     {
-        public int NumeroDeDni { get; set; }
+        public string NumeroDeDni { get; set; }
+        public int IDPlatillo { get; set; }
         public string NombrePlatillo { get; set; }
         public decimal Precio { get; set; }
         public int Mesa { get; set; }

@@ -102,3 +102,16 @@ C:\Work_space\MOANSO\PROYECTOFINAL1\CapaLogica\obj\Debug\CapaLogica.csproj.CoreC
 C:\Work_space\MOANSO\PROYECTOFINAL1\CapaLogica\obj\Debug\CapaLogica.csproj.CopyComplete
 C:\Work_space\MOANSO\PROYECTOFINAL1\CapaLogica\obj\Debug\CapaLogica.dll
 C:\Work_space\MOANSO\PROYECTOFINAL1\CapaLogica\obj\Debug\CapaLogica.pdb
+C:\Users\David\source\repos\V2 El Faro\CapaLogica\bin\Debug\CapaLogica.dll
+C:\Users\David\source\repos\V2 El Faro\CapaLogica\bin\Debug\CapaLogica.pdb
+C:\Users\David\source\repos\V2 El Faro\CapaLogica\bin\Debug\CapaDatos.dll
+C:\Users\David\source\repos\V2 El Faro\CapaLogica\bin\Debug\CapaEntidad.dll
+C:\Users\David\source\repos\V2 El Faro\CapaLogica\bin\Debug\CapaDatos.pdb
+C:\Users\David\source\repos\V2 El Faro\CapaLogica\bin\Debug\CapaEntidad.pdb
+C:\Users\David\source\repos\V2 El Faro\CapaLogica\obj\Debug\CapaLogica.csproj.AssemblyReference.cache
+C:\Users\David\source\repos\V2 El Faro\CapaLogica\obj\Debug\CapaLogica.Properties.Resources.resources
+C:\Users\David\source\repos\V2 El Faro\CapaLogica\obj\Debug\CapaLogica.csproj.GenerateResource.cache
+C:\Users\David\source\repos\V2 El Faro\CapaLogica\obj\Debug\CapaLogica.csproj.CoreCompileInputs.cache
+C:\Users\David\source\repos\V2 El Faro\CapaLogica\obj\Debug\CapaLogica.csproj.CopyComplete
+C:\Users\David\source\repos\V2 El Faro\CapaLogica\obj\Debug\CapaLogica.dll
+C:\Users\David\source\repos\V2 El Faro\CapaLogica\obj\Debug\CapaLogica.pdb

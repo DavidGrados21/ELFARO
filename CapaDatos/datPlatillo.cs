@@ -26,7 +26,6 @@ namespace CapaDatos
         }
         #endregion singleton
 
-        ////////////////////listado de Clientes
         public List<entPlatillo> ListarPlatillo()
         {
             SqlCommand cmd = null;
@@ -144,31 +143,31 @@ namespace CapaDatos
             return delete;
 
         }
-        
+
         public Boolean EditarPlatillo(entPlatillo Cli, string nombre)
         {
             SqlCommand cmd = null;
             Boolean edita = false;
-        try
-        {
-            SqlConnection cn = Conexion.Instancia.Conectar();
-            cmd = new SqlCommand("spEditaPlatillo", cn);
-            cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.AddWithValue("@NombrePlatillo", Cli.NombrePlatillo);
-            cmd.Parameters.AddWithValue("@NuevoNombrePlatillo", nombre);
-            cmd.Parameters.AddWithValue("@Precio ", Cli.Precio);
-        
-            cn.Open();
-            int i = cmd.ExecuteNonQuery();
-            if (i > 0)
+            try
             {
-                edita = true;
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("spEditaPlatillo", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@NombrePlatillo", Cli.NombrePlatillo);
+                cmd.Parameters.AddWithValue("@NuevoNombrePlatillo", nombre);
+                cmd.Parameters.AddWithValue("@Precio ", Cli.Precio);
+
+                cn.Open();
+                int i = cmd.ExecuteNonQuery();
+                if (i > 0)
+                {
+                    edita = true;
+                }
             }
-        }
-        catch (Exception e)
-        {
-            throw e;
-        }
+            catch (Exception e)
+            {
+                throw e;
+            }
             finally { cmd.Connection.Close(); }
             return edita;
         }
@@ -183,7 +182,7 @@ namespace CapaDatos
                     cmd.CommandType = CommandType.StoredProcedure;
 
                     // Agregar el parámetro @p_nombre_platillo y asignarle el valor
-                    cmd.Parameters.AddWithValue("@p_nombre_platillo", nombrePlatillo);
+                    cmd.Parameters.AddWithValue("NombrePlatillo", nombrePlatillo);
 
                     cn.Open();
 
@@ -203,6 +202,75 @@ namespace CapaDatos
 
             return precio;
         }
- 
+        public List<entPlatillo> BusquedadPlatillo(string nombrePlatillo)
+        {
+            SqlCommand cmd = null;
+            List<entPlatillo> Pedidos = new List<entPlatillo>();
+
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("BuscarPlatillo", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@NombrePlatillo", nombrePlatillo);
+
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+
+                while (dr.Read())
+                {
+                    entPlatillo PLA = new entPlatillo();
+                    PLA.NombrePlatillo = dr["NombrePlatillo"].ToString();
+                    PLA.Precio = Convert.ToInt32(dr["Precio"]);
+                    Pedidos.Add(PLA);
+                }
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            finally
+            {
+                if (cmd != null && cmd.Connection != null)
+                {
+                    cmd.Connection.Close();
+                }
+            }
+
+            return Pedidos;
+        }
+        public int ObtenerID(string nombrePlatillo)
+        {
+            SqlCommand cmd = null;
+            int idPlatillo = 0;
+            try
+            {
+                SqlConnection cn = Conexion.Instancia.Conectar();
+                cmd = new SqlCommand("ObtenerIDPlatilloPorNombre", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@NombrePlatillo", nombrePlatillo);
+                cn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    int.TryParse(dr["IDplatillo"].ToString(), out idPlatillo);
+                }
+                dr.Close();
+            }
+            catch (Exception e)
+            {
+                // Aquí puedes agregar lógica de manejo de errores, como registrar la excepción.
+                throw e;
+            }
+            finally
+            {
+                if (cmd != null)
+                {
+                    cmd.Connection.Close();
+                }
+            }
+            return idPlatillo;
+        }
+
     }
 }
