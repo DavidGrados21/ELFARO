@@ -40,3 +40,9 @@ C:\Users\David\source\repos\Elfaro V2\CapaEntidad\obj\Debug\CapaEntidad.csproj.A
 C:\Users\David\source\repos\Elfaro V2\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
 C:\Users\David\source\repos\Elfaro V2\CapaEntidad\obj\Debug\CapaEntidad.dll
 C:\Users\David\source\repos\Elfaro V2\CapaEntidad\obj\Debug\CapaEntidad.pdb
+C:\Work_space\MOANSO\PROYECTOFINAL1\CapaEntidad\bin\Debug\CapaEntidad.dll
+C:\Work_space\MOANSO\PROYECTOFINAL1\CapaEntidad\bin\Debug\CapaEntidad.pdb
+C:\Work_space\MOANSO\PROYECTOFINAL1\CapaEntidad\obj\Debug\CapaEntidad.csproj.AssemblyReference.cache
+C:\Work_space\MOANSO\PROYECTOFINAL1\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
+C:\Work_space\MOANSO\PROYECTOFINAL1\CapaEntidad\obj\Debug\CapaEntidad.dll
+C:\Work_space\MOANSO\PROYECTOFINAL1\CapaEntidad\obj\Debug\CapaEntidad.pdb

@@ -19,14 +19,30 @@ namespace ElFaroV1
 
         private void btnMantenedorMozo_Click(object sender, EventArgs e)
         {
-            MantenedorMozo mozo = new MantenedorMozo();
-            mozo.ShowDialog();
+            OpenMantenedorMozo();
         }
 
         private void btnMantenedorProveedor_Click(object sender, EventArgs e)
         {
+            OpenMantenedorProveedor();
+        }
+
+        private void OpenMantenedorProveedor()
+        {
+            Close();
+
+            // Abrir el formulario MantenedorProveedor
             MantenedorProveedor pro = new MantenedorProveedor();
             pro.ShowDialog();
+        }
+
+        private void OpenMantenedorMozo()
+        {
+            Close();
+
+            // Abrir el formulario MantenedorProveedor
+            MantenedorMozo mozo = new MantenedorMozo();
+            mozo.ShowDialog();
         }
     }
 }

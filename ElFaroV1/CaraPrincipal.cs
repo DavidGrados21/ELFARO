@@ -26,13 +26,13 @@ namespace ElFaroV1
 
         private void btnAlmacen_Click(object sender, EventArgs e)
         {
-            MantenedorInsumos Alma= new MantenedorInsumos();
-            Alma.ShowDialog();
+            MMAlmacen almacen = new MMAlmacen();
+            almacen.ShowDialog();
         }
 
         private void btnPedidos_Click(object sender, EventArgs e)
         {
-           RealizaPedido rp= new RealizaPedido();   
+           MMMoza rp= new MMMoza();   
            rp.ShowDialog();
             
         }

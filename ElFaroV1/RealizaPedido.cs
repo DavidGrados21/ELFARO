@@ -23,7 +23,7 @@ namespace CapaLogica
         }
         private void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-            int dni = int.Parse(txtDNI.Text);
+            int dni = int.Parse(txtDNIMozo.Text);
             int pass = int.Parse(txtPass.Text);
             if(logMozo.Instancia.IniciarSesionMozo(dni, pass) != null)
             {
@@ -35,7 +35,7 @@ namespace CapaLogica
             else
             {
                 MessageBox.Show("Credenciales incorrectas ", "Iniciar Sesion", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtDNI.Clear();
+                txtDNIMozo.Clear();
                 txtPass.Clear();
             }
 
@@ -45,8 +45,10 @@ namespace CapaLogica
         {
             string name = CBPlatillos.Text;
             decimal precio = logPlatillo.Instancia.Obtenerprecio(name);
+            int id = logPlatillo.Instancia.ObtenerID(name);
             int c = (int)NUDMesa.Value;
-            int cliente = int.Parse(txtDniCliente.Text);
+            string cliente = txtDocumentoCliente.Text;
+            int dni = int.Parse(txtDNIMozo.Text);
             DateTime fecha = DateTime.Now;
 
             try
@@ -57,7 +59,7 @@ namespace CapaLogica
                 p.Mesa = c;
                 p.NumeroDeDni = cliente;
                 p.HoraCreacion = fecha;
-                logPedido.Instancia.InsertarPedido(p);
+                logPedido.Instancia.InsertarPedido(p, dni, id);
             }
             catch (Exception ex)
             {
@@ -79,13 +81,13 @@ namespace CapaLogica
         }
         public void MostrarPedido()
         {
-            int cliente = int.Parse(txtDniCliente.Text);
+            int cliente = int.Parse(txtDocumentoCliente.Text);
             dgvPedidos.DataSource = logPedido.Instancia.DatosBoleta(cliente);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            int dni = int.Parse(txtDniCliente.Text);
+            int dni = int.Parse(txtDocumentoCliente.Text);
             if (logCliente.Instancia.VerificarDNI(dni))
             {
                 GBPedido.Enabled = true;

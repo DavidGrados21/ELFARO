@@ -34,7 +34,6 @@ namespace ElFaroV1
         public void LimpiarVariables()
         {
             txtNombreImsumos.Clear();
-            txtCantidadInsumos.Clear();
             CBInsumos.SelectedIndex = -1;
         }
 
@@ -46,7 +45,6 @@ namespace ElFaroV1
             {
                 entInsumo c = new entInsumo();
                 c.NombreInsumos = txtNombreImsumos.Text.Trim();
-                c.Cantidad = int.Parse(txtCantidadInsumos.Text.Trim());
                 c.UM = CBInsumos.SelectedItem.ToString();
                 logInsumo.Instancia.InsertaInsumosCL(c);
             }
@@ -87,31 +85,11 @@ namespace ElFaroV1
         {
             DataGridViewRow filaActual = dgvAlmacen.Rows[e.RowIndex];
             txtNombreImsumos.Text = filaActual.Cells[0].Value.ToString();
-            txtCantidadInsumos.Text = filaActual.Cells[1].Value.ToString();
             txtFalse.Text = filaActual.Cells[0].Value.ToString();
             string du = filaActual.Cells[2].Value.ToString();
             if (du == "Kilogramos"){CBInsumos.SelectedIndex = 0;}
             else if (du == "Litros"){CBInsumos.SelectedIndex = 1;}
             else{CBInsumos.SelectedIndex = 2;}
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                entInsumo c = new entInsumo();
-                c.NombreInsumos = txtFalse.Text.Trim();
-                string n = txtNombreImsumos.Text;
-                c.Cantidad = int.Parse(txtCantidadInsumos.Text.Trim());
-                c.UM = CBInsumos.SelectedItem.ToString();
-                logInsumo.Instancia.EditarInsumo(c,n);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error.." + ex);
-            }
-            LimpiarVariables();
-            listarInsumos();
         }
     }
 }

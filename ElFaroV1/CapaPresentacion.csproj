@@ -46,17 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MMAlmacen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MMAlmacen.Designer.cs">
+      <DependentUpon>MMAlmacen.cs</DependentUpon>
+    </Compile>
     <Compile Include="CaraPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CaraPrincipal.Designer.cs">
       <DependentUpon>CaraPrincipal.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ConsultaIStock.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ConsultaIStock.Designer.cs">
-      <DependentUpon>ConsultaIStock.cs</DependentUpon>
     </Compile>
     <Compile Include="ConsultaPedido.cs">
       <SubType>Form</SubType>
@@ -81,6 +81,18 @@
     </Compile>
     <Compile Include="Mantenedores.Designer.cs">
       <DependentUpon>Mantenedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MMMoza.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MMMoza.Designer.cs">
+      <DependentUpon>MMMoza.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RealizaNotaDeIgreso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RealizaNotaDeIgreso.Designer.cs">
+      <DependentUpon>RealizaNotaDeIgreso.cs</DependentUpon>
     </Compile>
     <Compile Include="RealizaComprobante.cs">
       <SubType>Form</SubType>
@@ -118,6 +130,12 @@
     <Compile Include="MMCocina.Designer.cs">
       <DependentUpon>MMCocina.cs</DependentUpon>
     </Compile>
+    <Compile Include="RealizanotaIngreso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RealizanotaIngreso.Designer.cs">
+      <DependentUpon>RealizanotaIngreso.cs</DependentUpon>
+    </Compile>
     <Compile Include="RealizaPedido.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,17 +150,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RealizarOrdenCompra.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="RealizarOrdenCompra.Designer.cs">
-      <DependentUpon>RealizarOrdenCompra.cs</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="MMAlmacen.resx">
+      <DependentUpon>MMAlmacen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CaraPrincipal.resx">
       <DependentUpon>CaraPrincipal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ConsultaIStock.resx">
-      <DependentUpon>ConsultaIStock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ConsultaPedido.resx">
       <DependentUpon>ConsultaPedido.cs</DependentUpon>
@@ -155,6 +167,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Mantenedores.resx">
       <DependentUpon>Mantenedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MMMoza.resx">
+      <DependentUpon>MMMoza.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RealizaNotaDeIgreso.resx">
+      <DependentUpon>RealizaNotaDeIgreso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RealizaComprobante.resx">
       <DependentUpon>RealizaComprobante.cs</DependentUpon>
@@ -174,6 +192,9 @@
     <EmbeddedResource Include="MMCocina.resx">
       <DependentUpon>MMCocina.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RealizanotaIngreso.resx">
+      <DependentUpon>RealizanotaIngreso.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="RealizaPedido.resx">
       <DependentUpon>RealizaPedido.cs</DependentUpon>
     </EmbeddedResource>
@@ -189,9 +210,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="RealizarOrdenCompra.resx">
-      <DependentUpon>RealizarOrdenCompra.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

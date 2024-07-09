@@ -72,7 +72,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 68);
+            this.label2.Location = new System.Drawing.Point(12, 79);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(58, 20);
             this.label2.TabIndex = 17;
@@ -114,7 +114,7 @@
             // 
             // btnDeshabilitar
             // 
-            this.btnDeshabilitar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnDeshabilitar.BackColor = System.Drawing.SystemColors.Control;
             this.btnDeshabilitar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnDeshabilitar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnDeshabilitar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -123,13 +123,13 @@
             this.btnDeshabilitar.Name = "btnDeshabilitar";
             this.btnDeshabilitar.Size = new System.Drawing.Size(115, 48);
             this.btnDeshabilitar.TabIndex = 30;
-            this.btnDeshabilitar.Text = "DESHABILITAR";
+            this.btnDeshabilitar.Text = "DESHABILITAR/HABILITAR";
             this.btnDeshabilitar.UseVisualStyleBackColor = false;
             this.btnDeshabilitar.Click += new System.EventHandler(this.btnDeshabilitar_Click);
             // 
             // btnModificar
             // 
-            this.btnModificar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnModificar.BackColor = System.Drawing.SystemColors.Control;
             this.btnModificar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnModificar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -144,7 +144,7 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnAgregar.BackColor = System.Drawing.SystemColors.Control;
             this.btnAgregar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnAgregar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.btnAgregar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -183,7 +183,7 @@
             this.cbRubro.FormattingEnabled = true;
             this.cbRubro.Items.AddRange(new object[] {
             "Alimentos"});
-            this.cbRubro.Location = new System.Drawing.Point(110, 70);
+            this.cbRubro.Location = new System.Drawing.Point(122, 76);
             this.cbRubro.Name = "cbRubro";
             this.cbRubro.Size = new System.Drawing.Size(120, 21);
             this.cbRubro.TabIndex = 25;
@@ -229,13 +229,13 @@
             // 
             // dgvProveedor
             // 
-            this.dgvProveedor.BackgroundColor = System.Drawing.SystemColors.ActiveCaption;
+            this.dgvProveedor.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvProveedor.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvProveedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvProveedor.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.dgvProveedor.Location = new System.Drawing.Point(-37, 176);
+            this.dgvProveedor.Location = new System.Drawing.Point(16, 128);
             this.dgvProveedor.Name = "dgvProveedor";
-            this.dgvProveedor.Size = new System.Drawing.Size(601, 182);
+            this.dgvProveedor.Size = new System.Drawing.Size(550, 216);
             this.dgvProveedor.TabIndex = 20;
             this.dgvProveedor.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProveedor_CellClick);
             // 
@@ -243,6 +243,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(728, 367);
             this.Controls.Add(this.txtRuc);
             this.Controls.Add(this.btnSalir);

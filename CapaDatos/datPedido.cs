@@ -24,7 +24,7 @@ namespace CapaDatos
             }
         }
         #endregion singleton
-        public Boolean InsertarPedido(entPedido PL)
+        public Boolean InsertarPedido(entPedido PL,int dni, int idP)
         {
             SqlCommand cmd = null;
             Boolean inserta = false;
@@ -33,10 +33,12 @@ namespace CapaDatos
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("spInsertaPedido", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@DocumentoCliente", PL.NumeroDeDni);
+                cmd.Parameters.AddWithValue("@Mozo", dni);
                 cmd.Parameters.AddWithValue("@NombrePlatillo", PL.NombrePlatillo);
+                cmd.Parameters.AddWithValue("@IDPlatillo", idP);
                 cmd.Parameters.AddWithValue("@Nmesa", PL.Mesa);
                 cmd.Parameters.AddWithValue("@Precio", PL.Precio);
-                cmd.Parameters.AddWithValue("@NumeroDeDni", PL.NumeroDeDni);
                 cmd.Parameters.AddWithValue("@FechaCreacion", PL.HoraCreacion);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
@@ -73,7 +75,7 @@ namespace CapaDatos
                 while (dr.Read())
                 {
                     entPedido Cli = new entPedido();
-                    Cli.NombrePlatillo = dr["NombrePlatillo"].ToString();
+                    Cli.IDPlatillo = Convert.ToInt32(dr["NombrePlatillo"].ToString()) ;
                     Cli.Precio = Convert.ToInt32(dr["Precio"]);
                     Cli.HoraCreacion = Convert.ToDateTime(dr["FechaCreacion"]);
                     Pedido.Add(Cli);
@@ -98,7 +100,7 @@ namespace CapaDatos
             try
             {
                 SqlConnection cn = Conexion.Instancia.Conectar(); //singleton
-                cmd = new SqlCommand("PedidoVistaMozo", cn);
+                cmd = new SqlCommand("PedidoVistaCocinero", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
@@ -107,7 +109,6 @@ namespace CapaDatos
                     entPedido Cli = new entPedido();
                     Cli.NombrePlatillo = dr["NombrePlatillo"].ToString();
                     Cli.Mesa = Convert.ToInt32(dr["Nmesa"]);
-                    Cli.NumeroDeDni = Convert.ToInt32(dr["NumeroDeDni"]);
                     Pedido.Add(Cli);
                 }
 
@@ -166,7 +167,7 @@ namespace CapaDatos
                 SqlDataReader dr = cmd.ExecuteReader();
                 if (dr.Read())
                 {
-                    DNI = int.Parse(dr["NumeroDeDni"].ToString());
+                    DNI = int.Parse(dr["DocumentoCliente"].ToString());
                 }
                 dr.Close();
             }
@@ -199,10 +200,11 @@ namespace CapaDatos
                 while (dr.Read())
                 {
                     entPedido Cli = new entPedido();
+                    Cli.IDPlatillo = Convert.ToInt32(dr["IDPlatillo"].ToString());
                     Cli.NombrePlatillo = dr["NombrePlatillo"].ToString();
                     Cli.Mesa = Convert.ToInt32(dr["Nmesa"]);
                     Cli.Precio = Convert.ToDecimal(dr["Precio"]);
-                    Cli.NumeroDeDni = Convert.ToInt32(dr["NumeroDeDni"]);
+                    Cli.NumeroDeDni = dr["DocumentoCliente"].ToString();
                     Cli.HoraCreacion = Convert.ToDateTime(dr["FechaCreacion"]);
                     Pedido.Add(Cli);
                 }
@@ -227,7 +229,7 @@ namespace CapaDatos
                 SqlConnection cn = Conexion.Instancia.Conectar(); //singleton
                 cmd = new SqlCommand("FiltrarPorPlatillo", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Nmesa", nombre);
+                cmd.Parameters.AddWithValue("@NombrePlatillo", nombre);
 
                 cn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();

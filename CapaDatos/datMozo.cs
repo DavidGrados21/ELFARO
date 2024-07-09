@@ -39,15 +39,15 @@ namespace CapaDatos
                 while (dr.Read())
                 {
                     entMozo Cli = new entMozo();
-                    Cli.dni = Convert.ToInt32(dr["DNI"].ToString());
-                    Cli.nombre = dr["Nombre"].ToString();
-                    Cli.fecha = Convert.ToDateTime(dr["Fecha_de_nacimiento"].ToString());
-                    Cli.direccion = dr["Direccion"].ToString();
-                    Cli.telefono = Convert.ToInt32(dr["Telefono"].ToString());
-                    Cli.correo = dr["Correo_electronico"].ToString();
-                    Cli.NdeCuenta = Convert.ToInt32(dr["NdeCuenta"].ToString());
+                    Cli.dni = Convert.ToInt32(dr["DocumentoMozo"].ToString());
+                    Cli.nombre = dr["NombreMozo"].ToString();
+                    Cli.fecha = Convert.ToDateTime(dr["FechaDeNacimientoMozo"].ToString());
+                    Cli.direccion = dr["DireccionMozo"].ToString();
+                    Cli.telefono = Convert.ToInt32(dr["TelefonoMozo"].ToString());
+                    Cli.correo = dr["Correo_electronicoMozo"].ToString();
+                    Cli.NdeCuenta = dr["NdeCuentaMozo"].ToString();
                     Cli.Hdetrabajo = Convert.ToDecimal(dr["Hdetrabajo"].ToString());
-                    Cli.pass = Convert.ToInt32(dr["Contraseña"]);
+                    Cli.pass = Convert.ToInt32(dr["ContraseñaMozo"]);
                     lista.Add(Cli);
                 }
 
@@ -71,14 +71,14 @@ namespace CapaDatos
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("spInsertaMozo", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@DNI", PL.dni);
-                cmd.Parameters.AddWithValue("@Nombre", PL.nombre);
-                cmd.Parameters.AddWithValue("@Fecha_de_nacimiento", PL.fecha);
-                cmd.Parameters.AddWithValue("@Direccion", PL.direccion);
-                cmd.Parameters.AddWithValue("@Telefono", PL.telefono);
-                cmd.Parameters.AddWithValue("@Correo_electronico", PL.correo);
-                cmd.Parameters.AddWithValue("@NdeCuenta", PL.NdeCuenta);
-                cmd.Parameters.AddWithValue("@Contraseña", PL.pass);
+                cmd.Parameters.AddWithValue("@DocumentoMozo", PL.dni);
+                cmd.Parameters.AddWithValue("@NombreMozo", PL.nombre);
+                cmd.Parameters.AddWithValue("@FechaDeNacimientoMozo", PL.fecha);
+                cmd.Parameters.AddWithValue("@DireccionMozo", PL.direccion);
+                cmd.Parameters.AddWithValue("@TelefonoMozo", PL.telefono);
+                cmd.Parameters.AddWithValue("@Correo_electronicoMozo", PL.correo);
+                cmd.Parameters.AddWithValue("@NdeCuentaMozo", PL.NdeCuenta);
+                cmd.Parameters.AddWithValue("@ContraseñaMozo", PL.pass);
                 cmd.Parameters.AddWithValue("@Hdetrabajo", PL.Hdetrabajo);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
@@ -110,14 +110,14 @@ namespace CapaDatos
                 cmd = new SqlCommand("spEditaMozo", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@NuevoNombre", nombre);
-                cmd.Parameters.AddWithValue("@DNI", PL.dni);
-                cmd.Parameters.AddWithValue("@Nombre", PL.nombre);
-                cmd.Parameters.AddWithValue("@Fecha_de_nacimiento", PL.fecha);
-                cmd.Parameters.AddWithValue("@Direccion", PL.direccion);
-                cmd.Parameters.AddWithValue("@Telefono", PL.telefono);
-                cmd.Parameters.AddWithValue("@Correo_electronico", PL.correo);
-                cmd.Parameters.AddWithValue("@NdeCuenta", PL.NdeCuenta);
-                cmd.Parameters.AddWithValue("@Contraseña", PL.pass);
+                cmd.Parameters.AddWithValue("@DocumentoMozo", PL.dni);
+                cmd.Parameters.AddWithValue("@NombreMozo", PL.nombre);
+                cmd.Parameters.AddWithValue("@FechaDeNacimientoMozo", PL.fecha);
+                cmd.Parameters.AddWithValue("@DireccionMozo", PL.direccion);
+                cmd.Parameters.AddWithValue("@TelefonoMozo", PL.telefono);
+                cmd.Parameters.AddWithValue("@Correo_electronicoMozo", PL.correo);
+                cmd.Parameters.AddWithValue("@NdeCuentaMozo", PL.NdeCuenta);
+                cmd.Parameters.AddWithValue("@ContraseñaMozo", PL.pass);
                 cmd.Parameters.AddWithValue("@Hdetrabajo", PL.Hdetrabajo);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
@@ -142,7 +142,7 @@ namespace CapaDatos
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("spEliminaMozo", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Nombre", nombreMozo);
+                cmd.Parameters.AddWithValue("@NombreMozo", nombreMozo);
                 cn.Open();
                 int i = cmd.ExecuteNonQuery();
                 if (i > 0)
@@ -167,7 +167,7 @@ namespace CapaDatos
                 SqlConnection cn = Conexion.Instancia.Conectar();
                 cmd = new SqlCommand("VerificarMozo", cn);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@DNI", DNI);
+                cmd.Parameters.AddWithValue("@DocumentoMozo", DNI);
                 cmd.Parameters.AddWithValue("@Contraseña", pass);
                 cn.Open();
 

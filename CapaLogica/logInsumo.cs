@@ -40,9 +40,11 @@ namespace CapaLogica
         {
             datInsumos.Instancia.EliminarInsumo(Cli);
         }
-        public void EditarInsumo(entInsumo PL, string nombre)
+
+
+        public entInsumo BuscarInsumosId(int idInsumo)
         {
-            datInsumos.Instancia.EditarInsumos(PL, nombre);
+            return datInsumos.Instancia.BuscarInsumoId(idInsumo);
         }
     }
 }

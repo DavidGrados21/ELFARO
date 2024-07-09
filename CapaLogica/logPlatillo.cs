@@ -45,6 +45,10 @@ namespace CapaLogica
         {
             datPlatillo.Instancia.EliminarPlatillo(n);
         }
+        public List<entPlatillo> BusquedadPlatillo(string n)
+        {
+            return datPlatillo.Instancia.BusquedadPlatillo(n);
+        }
 
         public void EditarPlatillo(entPlatillo PL, string nombre)
         {
@@ -52,8 +56,12 @@ namespace CapaLogica
         }
         public decimal Obtenerprecio (string nombre)
         {
-            decimal p = datPlatillo.Instancia.ObtenerPrecio(nombre);
-            return p;
+            return datPlatillo.Instancia.ObtenerPrecio(nombre); 
+        }
+
+        public int ObtenerID (string nombre)
+        {
+            return datPlatillo.Instancia.ObtenerID(nombre);
         }
     }
 }

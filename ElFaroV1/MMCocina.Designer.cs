@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MMCocina));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnPedidos = new System.Windows.Forms.Button();
-            this.btnCPlatillo = new System.Windows.Forms.Button();
+            this.btnMostrarPedidos = new System.Windows.Forms.Button();
+            this.btnCrearPlatillo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,35 +45,35 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // btnPedidos
+            // btnMostrarPedidos
             // 
-            this.btnPedidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPedidos.Location = new System.Drawing.Point(54, 86);
-            this.btnPedidos.Name = "btnPedidos";
-            this.btnPedidos.Size = new System.Drawing.Size(240, 43);
-            this.btnPedidos.TabIndex = 1;
-            this.btnPedidos.Text = "Mostrar Pedidos";
-            this.btnPedidos.UseVisualStyleBackColor = true;
-            this.btnPedidos.Click += new System.EventHandler(this.btnPedidos_Click);
+            this.btnMostrarPedidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMostrarPedidos.Location = new System.Drawing.Point(54, 86);
+            this.btnMostrarPedidos.Name = "btnMostrarPedidos";
+            this.btnMostrarPedidos.Size = new System.Drawing.Size(240, 43);
+            this.btnMostrarPedidos.TabIndex = 1;
+            this.btnMostrarPedidos.Text = "Mostrar Pedidos";
+            this.btnMostrarPedidos.UseVisualStyleBackColor = true;
+            this.btnMostrarPedidos.Click += new System.EventHandler(this.btnPedidos_Click);
             // 
-            // btnCPlatillo
+            // btnCrearPlatillo
             // 
-            this.btnCPlatillo.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCPlatillo.Location = new System.Drawing.Point(54, 209);
-            this.btnCPlatillo.Name = "btnCPlatillo";
-            this.btnCPlatillo.Size = new System.Drawing.Size(240, 38);
-            this.btnCPlatillo.TabIndex = 2;
-            this.btnCPlatillo.Text = "Crear Platillos";
-            this.btnCPlatillo.UseVisualStyleBackColor = true;
-            this.btnCPlatillo.Click += new System.EventHandler(this.btnCPlatillo_Click);
+            this.btnCrearPlatillo.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCrearPlatillo.Location = new System.Drawing.Point(54, 209);
+            this.btnCrearPlatillo.Name = "btnCrearPlatillo";
+            this.btnCrearPlatillo.Size = new System.Drawing.Size(240, 38);
+            this.btnCrearPlatillo.TabIndex = 2;
+            this.btnCrearPlatillo.Text = "Crear Platillos";
+            this.btnCrearPlatillo.UseVisualStyleBackColor = true;
+            this.btnCrearPlatillo.Click += new System.EventHandler(this.btnCPlatillo_Click);
             // 
             // MMCocina
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(348, 328);
-            this.Controls.Add(this.btnCPlatillo);
-            this.Controls.Add(this.btnPedidos);
+            this.Controls.Add(this.btnCrearPlatillo);
+            this.Controls.Add(this.btnMostrarPedidos);
             this.Controls.Add(this.pictureBox1);
             this.Name = "MMCocina";
             this.Text = "MMCocina";
@@ -85,7 +85,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btnPedidos;
-        private System.Windows.Forms.Button btnCPlatillo;
+        private System.Windows.Forms.Button btnMostrarPedidos;
+        private System.Windows.Forms.Button btnCrearPlatillo;
     }
 }

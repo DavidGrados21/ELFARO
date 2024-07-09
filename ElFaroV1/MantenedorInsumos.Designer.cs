@@ -30,14 +30,11 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.txtNombreImsumos = new System.Windows.Forms.TextBox();
-            this.txtCantidadInsumos = new System.Windows.Forms.TextBox();
             this.CBInsumos = new System.Windows.Forms.ComboBox();
             this.dgvAlmacen = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.txtFalse = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlmacen)).BeginInit();
             this.SuspendLayout();
@@ -56,21 +53,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(13, 102);
+            this.label2.Location = new System.Drawing.Point(13, 62);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(206, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Unidad De Medida";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(12, 57);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(106, 25);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Cantidad";
             // 
             // txtNombreImsumos
             // 
@@ -79,17 +66,10 @@
             this.txtNombreImsumos.Size = new System.Drawing.Size(256, 20);
             this.txtNombreImsumos.TabIndex = 3;
             // 
-            // txtCantidadInsumos
-            // 
-            this.txtCantidadInsumos.Location = new System.Drawing.Point(142, 63);
-            this.txtCantidadInsumos.Name = "txtCantidadInsumos";
-            this.txtCantidadInsumos.Size = new System.Drawing.Size(256, 20);
-            this.txtCantidadInsumos.TabIndex = 4;
-            // 
             // CBInsumos
             // 
             this.CBInsumos.FormattingEnabled = true;
-            this.CBInsumos.Location = new System.Drawing.Point(225, 102);
+            this.CBInsumos.Location = new System.Drawing.Point(225, 62);
             this.CBInsumos.Name = "CBInsumos";
             this.CBInsumos.Size = new System.Drawing.Size(173, 21);
             this.CBInsumos.TabIndex = 5;
@@ -97,7 +77,7 @@
             // dgvAlmacen
             // 
             this.dgvAlmacen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAlmacen.Location = new System.Drawing.Point(18, 146);
+            this.dgvAlmacen.Location = new System.Drawing.Point(17, 96);
             this.dgvAlmacen.Name = "dgvAlmacen";
             this.dgvAlmacen.Size = new System.Drawing.Size(489, 135);
             this.dgvAlmacen.TabIndex = 6;
@@ -116,23 +96,13 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(432, 106);
+            this.btnEliminar.Location = new System.Drawing.Point(432, 62);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar.TabIndex = 9;
             this.btnEliminar.Text = "ELIMINAR";
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(432, 60);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "EDITAR";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // txtFalse
             // 
@@ -146,16 +116,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(530, 296);
+            this.ClientSize = new System.Drawing.Size(530, 243);
             this.Controls.Add(this.txtNombreImsumos);
             this.Controls.Add(this.txtFalse);
-            this.Controls.Add(this.button2);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dgvAlmacen);
             this.Controls.Add(this.CBInsumos);
-            this.Controls.Add(this.txtCantidadInsumos);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "MantenedorInsumos";
@@ -170,14 +137,11 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtNombreImsumos;
-        private System.Windows.Forms.TextBox txtCantidadInsumos;
         private System.Windows.Forms.ComboBox CBInsumos;
         private System.Windows.Forms.DataGridView dgvAlmacen;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox txtFalse;
     }
 }

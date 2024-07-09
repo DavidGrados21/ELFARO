@@ -46,10 +46,11 @@ namespace ElFaroV1
             {
                 entProveedor p = new entProveedor();
                 p.RazonSocial = txtRazonSocial.Text.Trim();
-                p.Ruc = int.Parse(txtRuc.Text.Trim());
+                p.Ruc = txtRuc.Text.Trim();
                 p.Rubro = cbRubro.Text.Trim();
                 p.Direccion = txtDireccion.Text.Trim();
                 p.Telefono = int.Parse(txtTelefono.Text.Trim());
+                p.estado = true;
                 logProveedor.Instancia.InsertaProveedor(p);
             }
             catch (Exception ex)
@@ -66,12 +67,12 @@ namespace ElFaroV1
             try
             {
                 entProveedor p = new entProveedor();
-                p.Codigo = int.Parse(txtCodigoproveedor.Text.Trim());
                 p.RazonSocial = txtRazonSocial.Text.Trim();
-                p.Ruc = int.Parse(txtRuc.Text.Trim());
+                p.Ruc = txtRuc.Text.Trim();
                 p.Rubro = cbRubro.Text.Trim();
                 p.Direccion = txtDireccion.Text.Trim();
                 p.Telefono = int.Parse(txtTelefono.Text.Trim());
+                p.estado = true;
                 logProveedor.Instancia.Editaproveedor(p);
             }
             catch (Exception ex)
@@ -85,17 +86,36 @@ namespace ElFaroV1
 
         private void btnDeshabilitar_Click(object sender, EventArgs e)
         {
+            int codPRO = int.Parse(txtCodigoproveedor.Text.Trim());
             try
             {
-                entProveedor p = new entProveedor();
+                if (logProveedor.Instancia.VerificarProveedor(codPRO))
+                {
+                    bool a = false;
+                    entProveedor prov = new entProveedor();
+                    prov.Codigo = int.Parse(txtCodigoproveedor.Text.Trim());
+                    prov.RazonSocial = txtRazonSocial.Text.Trim();
+                    prov.Ruc = (txtRuc.Text.Trim());
+                    prov.Rubro = cbRubro.Text.Trim();
+                    prov.Direccion = txtDireccion.Text.Trim();
+                    prov.Telefono = int.Parse(txtTelefono.Text.Trim());
+                    prov.estado = a;
+                    logProveedor.Instancia.Editaproveedor(prov);
 
-                p.Codigo = int.Parse(txtCodigoproveedor.Text.Trim());
-                p.RazonSocial = txtRazonSocial.Text.Trim();
-                p.Ruc = int.Parse(txtRuc.Text.Trim());
-                p.Rubro = cbRubro.Text.Trim();
-                p.Direccion = txtDireccion.Text.Trim();
-                p.Telefono = int.Parse(txtTelefono.Text.Trim());
-                logProveedor.Instancia.DeshabilitaProveedor(p);
+                }
+                else
+                {
+                    bool a = true;
+                    entProveedor prov = new entProveedor();
+                    prov.Codigo = int.Parse(txtCodigoproveedor.Text.Trim());
+                    prov.RazonSocial = txtRazonSocial.Text.Trim();
+                    prov.Ruc = (txtRuc.Text.Trim());
+                    prov.Rubro = cbRubro.Text.Trim();
+                    prov.Direccion = txtDireccion.Text.Trim();
+                    prov.Telefono = int.Parse(txtTelefono.Text.Trim());
+                    prov.estado = a;
+                    logProveedor.Instancia.Editaproveedor(prov);
+                }
             }
             catch (Exception ex)
             {

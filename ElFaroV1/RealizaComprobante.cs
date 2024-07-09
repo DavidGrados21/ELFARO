@@ -97,7 +97,7 @@ namespace ElFaroV1
             sb.AppendLine("BOLETA DE VENTA ELECTRONICA ");
             sb.AppendLine(fecha + "        " + hora);
             sb.AppendLine("Usuario: " + txtNombre.Text + "        " + " UBI: mesa " + txtMesa.Text);
-            sb.AppendLine("Forma de Pago: contado");
+            sb.AppendLine("Forma de Pago: " + CBPago.Text);
             sb.AppendLine();
             // Agregar los encabezados de las columnas de la tabla
             foreach (DataGridViewColumn column in DGdescripcion.Columns)
@@ -150,6 +150,11 @@ namespace ElFaroV1
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+        }
+
+        private void RealizaComprobante_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

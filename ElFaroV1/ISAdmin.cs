@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ElFaroV1
 {
@@ -17,6 +18,7 @@ namespace ElFaroV1
         public ISAdmin()
         {
             InitializeComponent();
+            txtContraseña.PasswordChar = '*';
         }
 
         private void btnIS_Click(object sender, EventArgs e)
@@ -31,6 +33,7 @@ namespace ElFaroV1
                     MessageBox.Show("Bienvenido Administrador del Restaurante El Faro ", "Iniciar Sesion", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Mantenedores man = new Mantenedores();
                     man.ShowDialog();
+                    Close();
                 }
                 else
                 {
@@ -48,7 +51,7 @@ namespace ElFaroV1
             }
 
         }
-        private void txtContraseña_KeyDown(object sender, KeyEventArgs e)
+        private void txtContraseña_KeyDown_1(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {

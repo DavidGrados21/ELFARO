@@ -68,6 +68,7 @@
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Size = new System.Drawing.Size(263, 20);
             this.txtContraseña.TabIndex = 3;
+            this.txtContraseña.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtContraseña_KeyDown_1);
             // 
             // btnIS
             // 

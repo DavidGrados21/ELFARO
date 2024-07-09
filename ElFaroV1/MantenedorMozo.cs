@@ -46,7 +46,7 @@ namespace ElFaroV1
                 p.direccion = txtDireccion.Text;
                 p.telefono = int.Parse(txtNumero.Text);
                 p.correo = txtCorreo.Text;
-                p.NdeCuenta = int.Parse(txtCuenta.Text);
+                p.NdeCuenta = txtCuenta.Text;
                 p.pass = int.Parse(txtPass.Text);
                 p.Hdetrabajo =  int.Parse(txtHoras.Text);
                 logMozo.Instancia.InsertarMozo(p);
@@ -99,7 +99,7 @@ namespace ElFaroV1
                 c.direccion = txtDireccion.Text;
                 c.telefono = int.Parse(txtNumero.Text);
                 c.correo = txtCorreo.Text;
-                c.NdeCuenta = int.Parse(txtCuenta.Text);
+                c.NdeCuenta = txtCuenta.Text;
                 c.pass = int.Parse(txtPass.Text);
                 c.Hdetrabajo = int.Parse(txtHoras.Text);
                 logMozo.Instancia.EditarMozo(c, n);

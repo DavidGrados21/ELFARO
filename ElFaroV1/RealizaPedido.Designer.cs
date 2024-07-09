@@ -32,7 +32,7 @@
             this.GBDatosMozo = new System.Windows.Forms.GroupBox();
             this.btnIniciarSesion = new System.Windows.Forms.Button();
             this.txtPass = new System.Windows.Forms.TextBox();
-            this.txtDNI = new System.Windows.Forms.TextBox();
+            this.txtDNIMozo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.CBPlatillos = new System.Windows.Forms.ComboBox();
@@ -47,7 +47,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtDniCliente = new System.Windows.Forms.TextBox();
+            this.txtDocumentoCliente = new System.Windows.Forms.TextBox();
             this.GBDatosMozo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPedidos)).BeginInit();
             this.GBPedido.SuspendLayout();
@@ -60,7 +60,7 @@
             // 
             this.GBDatosMozo.Controls.Add(this.btnIniciarSesion);
             this.GBDatosMozo.Controls.Add(this.txtPass);
-            this.GBDatosMozo.Controls.Add(this.txtDNI);
+            this.GBDatosMozo.Controls.Add(this.txtDNIMozo);
             this.GBDatosMozo.Controls.Add(this.label2);
             this.GBDatosMozo.Controls.Add(this.label1);
             this.GBDatosMozo.Location = new System.Drawing.Point(12, 12);
@@ -87,12 +87,12 @@
             this.txtPass.Size = new System.Drawing.Size(156, 20);
             this.txtPass.TabIndex = 3;
             // 
-            // txtDNI
+            // txtDNIMozo
             // 
-            this.txtDNI.Location = new System.Drawing.Point(6, 47);
-            this.txtDNI.Name = "txtDNI";
-            this.txtDNI.Size = new System.Drawing.Size(156, 20);
-            this.txtDNI.TabIndex = 2;
+            this.txtDNIMozo.Location = new System.Drawing.Point(6, 47);
+            this.txtDNIMozo.Name = "txtDNIMozo";
+            this.txtDNIMozo.Size = new System.Drawing.Size(156, 20);
+            this.txtDNIMozo.TabIndex = 2;
             // 
             // label2
             // 
@@ -195,10 +195,10 @@
             this.GBDatosCliente.Controls.Add(this.button2);
             this.GBDatosCliente.Controls.Add(this.button1);
             this.GBDatosCliente.Controls.Add(this.label4);
-            this.GBDatosCliente.Controls.Add(this.txtDniCliente);
+            this.GBDatosCliente.Controls.Add(this.txtDocumentoCliente);
             this.GBDatosCliente.Location = new System.Drawing.Point(12, 12);
             this.GBDatosCliente.Name = "GBDatosCliente";
-            this.GBDatosCliente.Size = new System.Drawing.Size(180, 160);
+            this.GBDatosCliente.Size = new System.Drawing.Size(186, 166);
             this.GBDatosCliente.TabIndex = 5;
             this.GBDatosCliente.TabStop = false;
             this.GBDatosCliente.Text = "Datos Cliente";
@@ -232,12 +232,12 @@
             this.label4.TabIndex = 1;
             this.label4.Text = "Introduzca el DNI del cliente";
             // 
-            // txtDniCliente
+            // txtDocumentoCliente
             // 
-            this.txtDniCliente.Location = new System.Drawing.Point(20, 61);
-            this.txtDniCliente.Name = "txtDniCliente";
-            this.txtDniCliente.Size = new System.Drawing.Size(138, 20);
-            this.txtDniCliente.TabIndex = 0;
+            this.txtDocumentoCliente.Location = new System.Drawing.Point(20, 61);
+            this.txtDocumentoCliente.Name = "txtDocumentoCliente";
+            this.txtDocumentoCliente.Size = new System.Drawing.Size(138, 20);
+            this.txtDocumentoCliente.TabIndex = 0;
             // 
             // RealizaPedido
             // 
@@ -268,7 +268,7 @@
 
         private System.Windows.Forms.GroupBox GBDatosMozo;
         private System.Windows.Forms.TextBox txtPass;
-        private System.Windows.Forms.TextBox txtDNI;
+        private System.Windows.Forms.TextBox txtDNIMozo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox CBPlatillos;
@@ -284,6 +284,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtDniCliente;
+        private System.Windows.Forms.TextBox txtDocumentoCliente;
     }
 }

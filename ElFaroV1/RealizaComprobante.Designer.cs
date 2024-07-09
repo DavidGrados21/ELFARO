@@ -40,7 +40,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtMesa = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.CBPago = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.DGdescripcion)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -66,7 +66,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.txtMesa);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.comboBox1);
+            this.groupBox1.Controls.Add(this.CBPago);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 21);
             this.groupBox1.Name = "groupBox1";
@@ -159,13 +159,19 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Nº de Mesa";
             // 
-            // comboBox1
+            // CBPago
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(174, 34);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(157, 21);
-            this.comboBox1.TabIndex = 1;
+            this.CBPago.FormattingEnabled = true;
+            this.CBPago.Items.AddRange(new object[] {
+            "Efectivo",
+            "Visa",
+            "Mastercard",
+            "Plin",
+            "Yape"});
+            this.CBPago.Location = new System.Drawing.Point(174, 34);
+            this.CBPago.Name = "CBPago";
+            this.CBPago.Size = new System.Drawing.Size(157, 21);
+            this.CBPago.TabIndex = 1;
             // 
             // label1
             // 
@@ -184,7 +190,8 @@
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.DGdescripcion);
             this.Name = "RealizaComprobante";
-            this.Text = "MantenedorFormaDePago";
+            this.Text = "RealizaComprobante";
+            this.Load += new System.EventHandler(this.RealizaComprobante_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DGdescripcion)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -205,7 +212,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtMesa;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox CBPago;
         private System.Windows.Forms.Label label1;
     }
 }

@@ -39,9 +39,9 @@ namespace CapaLogica
         {
             return datPedido.Instancia.FiltrarPedidosPorNombre(p);
         }
-        public void InsertarPedido(entPedido p)
+        public void InsertarPedido(entPedido p, int dni, int idp)
         {
-            datPedido.Instancia.InsertarPedido(p);
+            datPedido.Instancia.InsertarPedido(p, dni, idp);
         }
         public decimal Subtotal(int mesa)
         {
